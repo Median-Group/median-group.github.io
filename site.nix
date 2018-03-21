@@ -28,6 +28,7 @@ rec {
      items at the end of the list have higher priority
   */
   themes = [
+    styx-themes.generic-templates
     ./themes/median
   ];
 
@@ -86,13 +87,18 @@ rec {
       path    = "/index.html"; 
     };
     about = make_lipsum_page "About";
-    news = make_lipsum_page "News";
     publications = make_lipsum_page "Publications";
     team = make_lipsum_page "Team";
+    # news = make_lipsum_page "News";
+    news = {
+      layout = templates.layout;
+      template = templates.news;
+      path = "/news.html";
+    };
     news_posts = lib.mkPageList {
       data = data.news_posts;
       pathPrefix = "/news/";
-      template = templates.post;
+      template = templates.post.full;
       layout = templates.layout;
     };
 

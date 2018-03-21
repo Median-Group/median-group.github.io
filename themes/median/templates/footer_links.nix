@@ -1,10 +1,10 @@
-{lib, pages, ...}:
+{templates, lib, pages, ...}:
 with lib;
 ''
-  <ul>
-    <li><a href=${pages.about.path}>About</a></li>
-    <li><a href=${pages.news.path}>News</a></li>
-    <li><a href=${pages.publications.path}>Publications</a></li>
-    <li><a href=${pages.team.path}>Team</a></li>
-  </ul>
+<ul>
+  <li>${templates.tag.ilink {to = pages.about; content="About";}}</li>
+  <li>${templates.tag.ilink {to = pages.news; content="News";}}</li>
+  <li>${templates.tag.ilink {to = pages.publications; content="Publications";}}</li>
+  <li>${templates.tag.ilink {to = pages.team; content="Team";}}</li>
+</ul>
 ''
