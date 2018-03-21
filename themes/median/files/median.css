@@ -1,0 +1,19 @@
+header nav div {
+  display: inline-block; 
+}
+footer nav div {
+  display: inline-block; 
+}
+.logo img {
+  width: 0.5in;
+  height: 0.5in;
+}
+.links ul {
+   display: block;
+   list-style: none;
+}
+.links li {
+  display: inline-block;
+  float: left;
+  margin: 0 13px 0 0;
+}
