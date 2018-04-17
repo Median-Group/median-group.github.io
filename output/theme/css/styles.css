@@ -21,6 +21,10 @@ img {
   vertical-align: bottom;
 }
 
+.container {
+  width: 100%;
+}
+
 .header {
   display: flex;
 }
@@ -136,6 +140,20 @@ img {
   margin-bottom: auto;
 }
 
+/* Mobile styles
+ * ********************************************/
+
+@media (max-width: 30em) {
+
+  .logo {
+    height: 50px;
+  }
+
+  .subtitle {
+    display: none;
+  }
+
+}
 
 /* Page-specific styles
  * ********************************************/
