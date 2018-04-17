@@ -1,11 +1,14 @@
 Title: Team 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam diam nisi, malesuada vitae justo in, finibus molestie est. In fermentum aliquet elementum. Nullam ultrices enim lorem, molestie finibus velit tincidunt non. Aenean facilisis massa sit amet condimentum consequat. Maecenas in sodales sapien. Ut erat arcu, eleifend a facilisis vel, iaculis non odio. Vivamus vel felis ac est maximus ullamcorper quis in sem. Curabitur eget lacinia purus. Maecenas id dapibus mi, vel vehicula dui.
+Ben Hoffman has worked as a researcher for GiveWell and the Open Philanthropy Project, and worked in financial services managing a risk analytics team. He holds an MS in Mathematics and Statistics from Georgetown University, and a BA from St John’s College.
 
-Sed vitae bibendum mauris. Duis lobortis dui eu nunc mollis, pretium vestibulum turpis dignissim. Ut sit amet nisi egestas, hendrerit erat at, accumsan nisi. Donec tempor nisl lorem, dictum iaculis sem pulvinar ut. Cras porttitor erat at felis ornare fringilla. Duis tincidunt mollis viverra. Integer consequat posuere lectus sit amet lobortis. Sed commodo enim odio, at sodales augue luctus varius. In fringilla pretium nibh sed convallis.
+J. Bryce Hidysmith was previously a designer and strategist for the hedge fund Numerai, and writes essays at www.hidysmith.com. 
 
-Integer at nunc at nibh tempor placerat. Vivamus laoreet bibendum nibh, et convallis nibh porta id. Cras sit amet orci nisi. Praesent metus augue, gravida id leo mollis, porttitor maximus magna. Donec eget tincidunt nunc. Aliquam tristique vulputate mauris at eleifend. Maecenas ullamcorper molestie eros in dapibus. Sed vel nunc iaculis, fermentum orci quis, lobortis turpis. Maecenas aliquam erat at consequat hendrerit. Cras placerat sem et pellentesque sodales.
+Baeo Maltinsky has worked as an analyst for the biotech start-up EnChroma and in education and outreach for Lawrence Berkeley National Lab. He has also done research on biophysically inspired clustering techniques at the Redwood Center for Theoretical Neuroscience and conducted field work and analysis in marine animal communication. He holds a BA in Mathematics from UC Berkeley.
 
-Sed vitae lacus eget justo sollicitudin ultrices vel in tortor. Aenean in mattis urna, vel luctus urna. Sed suscipit non risus a pharetra. Pellentesque et tellus semper leo eleifend sagittis. Vestibulum maximus ex in justo elementum convallis. Suspendisse potenti. Sed gravida gravida lobortis. Sed id nisl a justo faucibus tempus. Donec sagittis felis arcu, at commodo lorem rhoncus aliquet. Mauris non libero eget quam tempus hendrerit.
+Jessica Taylor has worked as a mathematical researcher at the Machine Intelligence Research Institute.  She holds a MS in Computer Science from Stanford University.
 
-Phasellus convallis pulvinar dignissim. Vestibulum vestibulum posuere vestibulum. Sed in mi vestibulum, aliquet urna quis, iaculis dolor. Nam pulvinar sem dui, at ornare est vestibulum vulputate. Praesent porta erat et nunc ultrices venenatis. Duis sodales lorem tortor, ut aliquam enim posuere sit amet. Vestibulum vel erat pellentesque, feugiat quam at, pulvinar nunc.
+Jack Gallagher has worked as a researcher in type theory and decision theory at the Machine Intelligence Research Institute.
+
+Colleen McKenzie has worked as a product manager and software engineer at Google, and has also consulted as a product strategist and an IT operations specialist. She holds a BA in Computer Science and Neuroscience from Columbia University.
+
