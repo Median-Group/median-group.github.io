@@ -1,6 +1,6 @@
 Title: Team 
 
-Ben Hoffman has worked as a researcher for GiveWell and the Open Philanthropy Project, and worked in financial services managing a risk analytics team. He holds an MS in Mathematics and Statistics from Georgetown University, and a BA from St John’s College.
+Ben Hoffman has worked as a researcher for GiveWell and the Open Philanthropy Project, and worked in financial services managing a risk analytics team. He holds an MS in Mathematics and Statistics from Georgetown University, and a BA from St John's College.
 
 J. Bryce Hidysmith was previously a designer and strategist for the hedge fund Numerai, and writes essays at www.hidysmith.com. 
 
