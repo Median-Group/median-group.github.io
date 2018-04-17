@@ -1,41 +1,23 @@
-# Welcome to your new styx site!
+# Setting up styx
 
-## Start
-
-The `site.nix` in this folder generate an empty site.
-
-
-## First steps
-
-Find the line saying `themes = [ ];` in `site.nix` and change it with the following to enable the generic-templates theme:
-
-```nix
-  themes = [
-    styx-themes.generic-templates
-  ];
+First you'll have to install Nix.
+The easiest way to do that is to run
+```sh
+curl https://nixos.org/nix/install | sh
 ```
+At which point you'll probably need to restart your terminal so you can access nix commands.
+You might also want to `nix-env -iA nixpkgs.styx` so that you can access Styx commands without having to open a Nix shell.
 
-Generic-templates theme provide a design and a set of templates, but there is no content to generate yet.
-
-So let's create a page, pages are declared in the pages attribute set. We will start with a  basic "Hello world!" index page:
-
+# Building the site
+Once you have Nix installed, you can build the site by running
+```sh
+nix-shell --run 'styx live'
 ```
-  pages = {
+This will fetch all the dependencies, build the site, host it on `http://127.0.0.1:8080`, and rebuild whenever you change something.
 
-    index = {
-      title    = "Hello world!";
-      content  = "<p>Hello world!</p>";
-      path     = "/index.html";
-      template = templates.page.full;
-      layout   = templates.layout;
-    };
+I've also found that `styx live` works outside of Nix shell, but it's less robust (if we add dependencies, it might stop working).
 
-  };
-```
+# Other notes
+You can find the Styx documentation by running `styx doc`
 
-Then, a preview of the site can be launch by running `styx preview`.
 
-The documentation for the current version of styx can be launched in a browser by running the `styx doc` command.
-The `styx-themes` packages set, that contains themes with example sites, documentation can also be found in the in styx documentation.
-
-Have fun!
