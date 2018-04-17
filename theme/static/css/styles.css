@@ -1,0 +1,160 @@
+/* TODO:
+ * - second ornament as content (or footer) separator
+ * - don't use actual bullet character for nav separating
+ */
+
+body {
+  font-family: 'IBM Plex Serif', serif;
+  margin: 0
+}
+
+a {
+  color: #28a;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.header {
+  display: flex;
+}
+
+.logo-wrapper, .headline {
+  height: 140px;
+}
+
+.logo-wrapper, .navigation {
+  width: 200px;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #000;
+}
+
+.logo {
+  height: 100px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.headline {
+  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-style: italic;
+  color: #28a;
+}
+
+.below-header {
+  display: flex;
+}
+
+.navigation, .content {
+  padding: 24px 48px;
+}
+
+.navigation {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border-top: 1px solid #000;
+  overflow: hidden;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item, .nav-separator {
+  text-align: center;
+}
+
+.nav-item {
+  padding: 8px 0;
+}
+
+.nav-item a {
+  color: #000;
+}
+
+.nav-separator::after {
+  color: #28a;
+  content: "\02022";
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  border-left: 1px solid #000;
+}
+
+.content {
+  border-top: 1px solid #000;
+}
+
+.page-title {
+  font-size: 1.8em;
+  margin-bottom: 24px;
+}
+
+.page-content {
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  color: #fff;
+  font-size: .8em;
+}
+
+.footer div {
+  padding: 48px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+/* Page-specific styles
+ * ********************************************/
+
+/* Projects page */
+.project-item {
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
+
+.project-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.project-separator {
+  text-align: center;
+  height: 30px;
+  background: url('../images/ornament1blue.svg') transparent center no-repeat;
+  background-size: 100px 30px;
+}

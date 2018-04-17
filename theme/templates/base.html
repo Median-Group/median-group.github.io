@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Median Research Group</title>
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif"
+          rel="stylesheet" />
+    <!-- TODO meta tags for e.g. mobile viewport -->
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo-wrapper">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/logo.png" class="logo" />
+        </div>
+        <div class="headline">
+          <div class="title">Median Research Group</div>
+          <div class="subtitle">i am an epigraph</div>
+        </div>
+     </div>
+
+      <div class="below-header">
+        <div class="navigation">
+          <ul class="links">
+	  {% for pg in pages[:-1] %}
+          <li class="nav-item"><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
+          <li class="nav-separator"></li>
+	  {% endfor %}
+          <li class="nav-item"><a href="{{ SITEURL }}/{{ pages[-1].url }}">{{ pages[-1].title }}</a></li>
+          </ul>
+        </div>
+        <div class="main">
+          <div class="content">
+          {% block content %}
+          {% endblock %}
+          </div>
+        </div>
+      <div class="footer">
+        <div>
+          &copy; 2018 Median Research Group
+        </div>
+        <div>
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ornament1white.svg" height="50px" />
+        </div>
+        <div>
+          <a href="mailto:info@median.org">info@mediangroup.org</a>
+        </div>
+      </div>
+
