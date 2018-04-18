@@ -1,11 +1,13 @@
 Title: Projects 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam diam nisi, malesuada vitae justo in, finibus molestie est. In fermentum aliquet elementum. Nullam ultrices enim lorem, molestie finibus velit tincidunt non. Aenean facilisis massa sit amet condimentum consequat. Maecenas in sodales sapien. Ut erat arcu, eleifend a facilisis vel, iaculis non odio. Vivamus vel felis ac est maximus ullamcorper quis in sem. Curabitur eget lacinia purus. Maecenas id dapibus mi, vel vehicula dui.
+The Socratic Initiative
+=======================
+The Socratic Initiative is designed to generate third-party reviews of research fields that are either too new to have their own journals and review articles, or politicized enough that public disagreements may be perceived as costly. We are developing an investigative protocol to document the reasoning behind multiple perspectives in a field with sufficient clarity for people outside the field to make valid direct comparisons between differing perspectives. The protocol is currently in testing, and potential future applications include AI safety and climate science. For more information, see our draft protocol document, or contact us at [email].
 
-Sed vitae bibendum mauris. Duis lobortis dui eu nunc mollis, pretium vestibulum turpis dignissim. Ut sit amet nisi egestas, hendrerit erat at, accumsan nisi. Donec tempor nisl lorem, dictum iaculis sem pulvinar ut. Cras porttitor erat at felis ornare fringilla. Duis tincidunt mollis viverra. Integer consequat posuere lectus sit amet lobortis. Sed commodo enim odio, at sodales augue luctus varius. In fringilla pretium nibh sed convallis.
+Roam
+====
+We are partnering with and sponsoring [NOTE: shouldn’t oversell this, check what we can say] the [Roam project](http://roamincards.com/) to produce mind mapping software suitable for research projects such as the Socratic Initiative. Contact us at [email] if you have a need for such software and are interested in helping it get made.
 
-Integer at nunc at nibh tempor placerat. Vivamus laoreet bibendum nibh, et convallis nibh porta id. Cras sit amet orci nisi. Praesent metus augue, gravida id leo mollis, porttitor maximus magna. Donec eget tincidunt nunc. Aliquam tristique vulputate mauris at eleifend. Maecenas ullamcorper molestie eros in dapibus. Sed vel nunc iaculis, fermentum orci quis, lobortis turpis. Maecenas aliquam erat at consequat hendrerit. Cras placerat sem et pellentesque sodales.
-
-Sed vitae lacus eget justo sollicitudin ultrices vel in tortor. Aenean in mattis urna, vel luctus urna. Sed suscipit non risus a pharetra. Pellentesque et tellus semper leo eleifend sagittis. Vestibulum maximus ex in justo elementum convallis. Suspendisse potenti. Sed gravida gravida lobortis. Sed id nisl a justo faucibus tempus. Donec sagittis felis arcu, at commodo lorem rhoncus aliquet. Mauris non libero eget quam tempus hendrerit.
-
-Phasellus convallis pulvinar dignissim. Vestibulum vestibulum posuere vestibulum. Sed in mi vestibulum, aliquet urna quis, iaculis dolor. Nam pulvinar sem dui, at ornare est vestibulum vulputate. Praesent porta erat et nunc ultrices venenatis. Duis sodales lorem tortor, ut aliquam enim posuere sit amet. Vestibulum vel erat pellentesque, feugiat quam at, pulvinar nunc.
+Mercatoria
+==========
+Mercatoria is a blockchain network optimized for both high transaction volumes, and decentralized computational capacity that scales much more efficiently than existing blockchain smart contract technology. For more information, contact [email].
