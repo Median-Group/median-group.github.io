@@ -15,6 +15,7 @@ DEFAULT_LANG = 'en'
 USE_FOLDER_AS_CATEGORY = True
 THEME = 'theme'
 TYPOGRIFY = True
+PAGE_ORDER_BY = 'order'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
