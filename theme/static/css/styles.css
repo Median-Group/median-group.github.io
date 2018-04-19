@@ -2,9 +2,13 @@
  * - second ornament as content (or footer) separator
  */
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'IBM Plex Serif', serif;
-  margin: 0
+  margin: 0;
 }
 
 a {
@@ -22,9 +26,13 @@ img {
 
 .container {
   width: 100%;
+  min-height: calc(100% - 5rem);
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
+  flex-shrink: 0;
   display: flex;
 }
 
@@ -70,6 +78,8 @@ img {
 }
 
 .below-header {
+  flex-shrink: 0;
+  flex-grow: 1;
   display: flex;
 }
 
@@ -128,15 +138,20 @@ img {
 }
 
 .footer {
+  height: 5rem;
+}
+
+.footer {
   display: flex;
   justify-content: space-around;
-  background-color: #000;
-  color: #fff;
+  /* background-color: #000;
+  color: #fff; */
   font-size: .8em;
+  margin-bottom: 0;
 }
 
 .footer div {
-  padding: 3rem;
+  padding: 1rem;
   /* padding: 48px; */
   margin-top: auto;
   margin-bottom: auto;
@@ -174,6 +189,7 @@ img {
   .navigation, .content {
     padding: 0.5rem 1rem;
   }
+
   .footer div {
     padding: 1.5rem;
   }
