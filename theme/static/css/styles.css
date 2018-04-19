@@ -29,7 +29,7 @@ img {
 }
 
 .logo-wrapper, .headline {
-  height: 8.75rem;
+  height: 8.75rem; 
 }
 
 .logo-wrapper, .navigation {
@@ -40,6 +40,7 @@ img {
   display: flex;
   justify-content: center;
   border-right: 1px solid #000;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -51,6 +52,7 @@ img {
 
 .headline {
   padding-left: 3rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,18 +147,35 @@ img {
 
 
 @media (max-width: 30em) {
-  html {
-    font-size: 0.75em;
-  }
   .logo-wrapper, .navigation {
-    width: 8rem;
+    width: 6rem;
   }
+
+  .logo-wrapper, .headline {
+    height: 6rem;
+  }
+
   .logo {
-    height: 5rem;
+    height: 4rem;
+  }
+
+  .headline {
+    padding-left: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8em;
   }
 
   .subtitle {
     display: none;
+  }
+
+  .navigation, .content {
+    padding: 0.5rem 1rem;
+  }
+  .footer div {
+    padding: 1.5rem;
   }
 
 }
