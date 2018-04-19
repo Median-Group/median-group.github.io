@@ -29,11 +29,11 @@ img {
 }
 
 .logo-wrapper, .headline {
-  height: 140px;
+  height: 8.75rem;
 }
 
 .logo-wrapper, .navigation {
-  width: 200px;
+  width: 12.5rem;
 }
 
 .logo-wrapper {
@@ -43,14 +43,14 @@ img {
 }
 
 .logo {
-  height: 100px;
+  height: 6.25rem;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .headline {
-  padding-left: 48px;
+  padding-left: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,7 +59,7 @@ img {
 .title {
   font-size: 2em;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .subtitle {
@@ -72,7 +72,7 @@ img {
 }
 
 .navigation, .content {
-  padding: 24px 48px;
+  padding: 1.5rem 3rem;
 }
 
 .navigation {
@@ -94,7 +94,7 @@ img {
 }
 
 .nav-item {
-  padding: 8px 0;
+  padding: 0.5rem 0;
 }
 
 .nav-item a {
@@ -119,7 +119,7 @@ img {
 
 .page-title {
   font-size: 1.8em;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .page-content {
@@ -134,7 +134,8 @@ img {
 }
 
 .footer div {
-  padding: 48px;
+  padding: 3rem;
+  /* padding: 48px; */
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -142,10 +143,16 @@ img {
 /* Mobile styles
  * ********************************************/
 
-@media (max-width: 30em) {
 
+@media (max-width: 30em) {
+  html {
+    font-size: 0.75em;
+  }
+  .logo-wrapper, .navigation {
+    width: 8rem;
+  }
   .logo {
-    height: 50px;
+    height: 5rem;
   }
 
   .subtitle {
@@ -154,24 +161,25 @@ img {
 
 }
 
+
 /* Page-specific styles
  * ********************************************/
 
 /* Projects page */
 .project-item {
-  margin-top: 24px;
-  margin-bottom: 36px;
+  margin-top: 1.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .project-title {
   font-size: 1.2em;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .project-separator {
   text-align: center;
-  height: 30px;
+  height: 1.875rem;
   background: url('../images/ornament1blue.svg') transparent center no-repeat;
-  background-size: 43px 30px;
+  background-size: 2.6875rem 1.875rem;
 }
