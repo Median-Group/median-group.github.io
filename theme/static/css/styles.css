@@ -144,6 +144,10 @@ img {
   height: 5rem;
 }
 
+.ornament {
+  height: 3rem;
+}
+
 .footer {
   display: flex;
   justify-content: space-around;
@@ -205,7 +209,7 @@ img {
     padding: 1.5rem;
   }
 
-  .ornament {
+  .ornament-div {
     display: none;
   }
 
