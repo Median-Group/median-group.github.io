@@ -26,9 +26,7 @@ img {
 
 .container {
   width: 100%;
-  min-height: calc(100% - 5rem);
-  display: flex;
-  flex-direction: column;
+  height: 100%;
 }
 
 .header {
@@ -78,6 +76,7 @@ img {
 }
 
 .below-header {
+  min-height: calc(100% - 8.75rem);
   flex-shrink: 0;
   flex-grow: 1;
   display: flex;
@@ -123,10 +122,13 @@ img {
   flex-grow: 1;
   flex-direction: column;
   border-left: 1px solid #000;
+  min-height: calc(100% - 5rem);
 }
 
 .content {
+  flex-grow: 1;
   border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .page-title {
@@ -138,6 +140,7 @@ img {
 }
 
 .footer {
+  flex-shrink: 0;
   height: 5rem;
 }
 
@@ -170,6 +173,10 @@ img {
     height: 6rem;
   }
 
+  .below-header {
+    min-height: calc(100% - 6rem);
+  }
+
   .logo {
     height: 4rem;
   }
@@ -190,8 +197,16 @@ img {
     padding: 0.5rem 1rem;
   }
 
+  .footer {
+    font-size: 0.6em;
+  }
+
   .footer div {
     padding: 1.5rem;
+  }
+
+  .ornament {
+    display: none;
   }
 
 }
