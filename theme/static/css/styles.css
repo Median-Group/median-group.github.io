@@ -76,7 +76,6 @@ img {
 
 .subtitle {
   font-style: italic;
-  color: #28a;
 }
 
 .below-header {
@@ -86,7 +85,7 @@ img {
   display: flex;
 }
 
-.navigation, .content {
+.links-div, .content {
   padding: 1.5rem 3rem;
 }
 
