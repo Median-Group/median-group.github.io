@@ -24,13 +24,15 @@
     </div>
       <div class="below-header">
         <div class="navigation">
-          <ul class="links">
-	  {% for pg in pages[:-1] %}
-          <li class="nav-item"><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
-          <li class="nav-separator"></li>
-	  {% endfor %}
-          <li class="nav-item"><a href="{{ SITEURL }}/{{ pages[-1].url }}">{{ pages[-1].title }}</a></li>
-          </ul>
+          <div class="links-div">
+            <ul class="links">
+      {% for pg in pages[:-1] %}
+            <li class="nav-item"><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
+            <li class="nav-separator"></li>
+      {% endfor %}
+            <li class="nav-item"><a href="{{ SITEURL }}/{{ pages[-1].url }}">{{ pages[-1].title }}</a></li>
+            </ul>
+          </div>
         </div>
         <div class="main">
           <div class="content">
