@@ -20,6 +20,11 @@ h1, h2, h3 {
   margin: 0;
 }
 
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 1.5rem;
+}
+
 img {
   vertical-align: bottom;
 }
@@ -40,10 +45,6 @@ img {
 
 .logo-wrapper, .navigation {
   width: 12.5rem;
-}
-
-.links-div {
-  border-bottom: 1px solid #000;
 }
 
 .logo-wrapper {
@@ -78,8 +79,8 @@ img {
   font-style: italic;
 }
 
-.below-header {
-  min-height: calc(100% - 8.75rem);
+.main {
+  min-height: calc(100% - 13.75rem);
   flex-shrink: 0;
   flex-grow: 1;
   display: flex;
@@ -120,56 +121,42 @@ img {
   content: "\02022";
 }
 
-.main {
+.content-container {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  border-top: 1px solid #000;
   border-left: 1px solid #000;
   min-height: calc(100% - 5rem);
 }
 
 .content {
   flex-grow: 1;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-
-.page-title {
-  font-size: 1.8em;
-  margin-bottom: 1.5rem;
-}
-
-.page-content {
 }
 
 .footer {
+  display: flex;
+  justify-content: space-around;
   flex-shrink: 0;
   height: 5rem;
+  font-size: .8em;
+  margin-bottom: 0;
+  border-top: 1px solid #000;
+}
+
+.footer div {
+  padding: 1rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .ornament {
   height: 3rem;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-around;
-  /* background-color: #000;
-  color: #fff; */
-  font-size: .8em;
-  margin-bottom: 0;
-}
-
-.footer div {
-  padding: 1rem;
-  /* padding: 48px; */
-  margin-top: auto;
-  margin-bottom: auto;
-}
 
 /* Mobile styles
  * ********************************************/
-
 
 @media (max-width: 30em) {
   .logo-wrapper, .navigation {
@@ -180,8 +167,8 @@ img {
     height: 6rem;
   }
 
-  .below-header {
-    min-height: calc(100% - 6rem);
+  .main {
+    min-height: calc(100% - 11rem);
   }
 
   .logo {
