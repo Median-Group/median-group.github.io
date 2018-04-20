@@ -20,6 +20,11 @@ h1, h2, h3 {
   margin: 0;
 }
 
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 1.5rem;
+}
+
 img {
   vertical-align: bottom;
 }
@@ -127,12 +132,6 @@ img {
 
 .content {
   flex-grow: 1;
-}
-
-/* TODO add page titles or delete this block */
-.page-title {
-  font-size: 1.8em;
-  margin-bottom: 1.5rem;
 }
 
 .footer {
