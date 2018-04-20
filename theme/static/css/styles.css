@@ -21,8 +21,9 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 1.8em;
-  margin-bottom: 1.5rem;
+  font-size: 1.6em;
+  font-weight: normal;
+  margin-bottom: 1rem;
 }
 
 img {
