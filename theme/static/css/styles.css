@@ -35,6 +35,13 @@ img {
   vertical-align: bottom;
 }
 
+hr {
+  border-width: 0px;
+  height: 1.875rem;
+  background: url('../images/ornament1blue.svg') transparent center no-repeat;
+  background-size: 2.6875rem 1.875rem;
+}
+
 .container {
   width: 100%;
   height: 100%;
