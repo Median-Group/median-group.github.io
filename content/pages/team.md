@@ -1,6 +1,7 @@
 Title: Team 
 order: 2
 url: team
+save_as: team.html
 
 Team
 ====

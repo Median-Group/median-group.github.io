@@ -1,6 +1,7 @@
 Title: Projects
 order: 1.5
 url: projects
+save_as: projects.html
 
 # Socratic Initiative
 
