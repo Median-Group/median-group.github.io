@@ -1,7 +1,6 @@
 Title: Contact
 order: 3
 url: contact
-save_as: contact
 
 Contact
 =======
