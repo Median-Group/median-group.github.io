@@ -36,10 +36,9 @@ img {
 }
 
 hr {
-  border-width: 0px;
-  height: 1.875rem;
-  background: url('../images/ornament1blue.svg') transparent center no-repeat;
-  background-size: 2.6875rem 1.875rem;
+  width: 60%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .container {
@@ -130,7 +129,6 @@ hr {
 }
 
 .nav-separator::after {
-  color: #28a;
   content: "\02022";
 }
 

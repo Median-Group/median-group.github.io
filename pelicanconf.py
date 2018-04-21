@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Baeo Maltinsky'
-SITENAME = 'MedianDocs'
+AUTHOR = 'Median Group'
+SITENAME = 'Median Group'
 SITEURL = ''
 
 PATH = 'content'
@@ -15,7 +15,6 @@ DEFAULT_LANG = 'en'
 USE_FOLDER_AS_CATEGORY = True
 THEME = 'theme'
 TYPOGRIFY = True
-PAGE_ORDER_BY = 'order'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -24,6 +23,8 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# pages
+# pages = ['Home', 'Projects', 'Team', 'Contact']
 # Blogroll
 '''
 LINKS = (('Pelican', 'http://getpelican.com/'),
