@@ -174,7 +174,7 @@ hr {
  * ********************************************/
 
 @media (max-width: 30em) {
-  .logo-wrapper, .navigation {
+  .logo-wrapper {
     width: 6rem;
   }
 
@@ -202,8 +202,34 @@ hr {
     display: none;
   }
 
+  .main {
+    display: block;
+  }
+
+  .navigation {
+    width: 100%;
+  }
+
+  .content-container {
+    border: none;
+    border-top: 1px solid #000;
+  }
+
   .links-div, .content {
     padding: 0.5rem 1rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-item, .nav-separator {
+    display: inline-block;
+  }
+
+  .nav-separator {
+    margin: auto 0;
   }
 
   .footer {
