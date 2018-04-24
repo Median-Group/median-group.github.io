@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Median Group</title>
-    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/theme/css/styles.css" />
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif"
     rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
     <div class="header">
       <div class="logo-wrapper">
         <a href="/">
-        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/logo.png" class="logo" alt="Median Group logo"/>
+        <img src="/theme/images/logo.png" class="logo" alt="Median Group logo"/>
         </a>
       </div>
       <div class="headline">
@@ -26,18 +26,22 @@
       <div class="navigation">
         <div class="links-div">
           <ul class="links">
-            {% for pg in pages[:-1] %}
-            <li class="nav-item"><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
+            <li class="nav-item"><a href="/">Home</a></li>
             <li class="nav-separator"></li>
-            {% endfor %}
-            <li class="nav-item"><a href="{{ SITEURL }}/{{ pages[-1].url }}">{{ pages[-1].title }}</a></li>
+            <li class="nav-item"><a href="/projects">Projects</a></li>
+            <li class="nav-separator"></li>
+            <li class="nav-item"><a href="/team">Team</a></li>
+            <li class="nav-separator"></li>
+            <li class="nav-item"><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="content-container">
         <div class="content">
-          {% block content %}
-          {% endblock %}
+<h1>Archives for Median Group</h1>
+
+<dl>
+</dl>
         </div>
       </div>
     </div>
@@ -46,7 +50,7 @@
         &copy; 2018 Median Group
       </div>
       <div class="ornament-div">
-        <img class="ornament" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/ornament1black.svg" />
+        <img class="ornament" src="/theme/images/ornament1black.svg" />
       </div>
       <div>
         <a href="mailto:info@median.org">info@mediangroup.org</a>
@@ -55,4 +59,3 @@
   </div>
 </body>
 </html>
-
