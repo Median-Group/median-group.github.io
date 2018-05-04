@@ -1,0 +1,7 @@
+__pycache__/
+output/
+archives.html
+authors.html
+categories.html
+feeds/
+tags.html
