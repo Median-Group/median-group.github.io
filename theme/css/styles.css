@@ -47,6 +47,8 @@ hr {
   width: 60%;
   margin-bottom: 4rem;
   margin-top: 4rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .container {
@@ -250,5 +252,4 @@ hr {
   }
 
 }
-
 
