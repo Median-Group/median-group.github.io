@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Median Group</title>
+    <link rel="stylesheet" type="text/css" href="/theme/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif"
+    rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-wrapper">
+        <a href="/">
+        <img src="/theme/images/logo.png" class="logo" alt="Median Group logo"/>
+        </a>
+      </div>
+      <div class="headline">
+        <div class="title">Median Group</div>
+        <div class="subtitle"> All valid beliefs can be reconciled.
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="navigation">
+        <div class="links-div">
+          <ul class="links">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-separator"></li>
+            <li class="nav-item"><a href="/research">Research</a></li>
+            <li class="nav-separator"></li>
+            <li class="nav-item"><a href="/team">Team</a></li>
+            <li class="nav-separator"></li>
+            <li class="nav-item"><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content">
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="/insights.html" rel="bookmark"
+         title="Permalink to Insight-based AI timelines model">Insight-based <span class="caps">AI</span> timelines&nbsp;model</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <time class="published" datetime="2018-07-26T12:39:41.046937-07:00">
+      Thu 26 July 2018
+    </time>
+    <address class="vcard author">
+      By           <a class="url fn" href="/author/median-group.html">Median Group</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    
+    <h1> Insight-based <span class="caps">AI</span> timeline&nbsp;model</h1>
+    <p>
+    For various &#8220;percentages of the way&#8221; done <span class="caps">AI</span> research could be, in terms of percentage of the necessary insights discovered, what is the probability that <span class="caps">AI</span> research is not yet that percentage&nbsp;done?
+    </p>
+    <div style="position:relative">
+      <div style="display:flex;flex-direction:row">
+        <div style="position:relative;min-width:300px">
+          <p style="position:absolute;top:-8px;right:10px;margin:0px">100%</p>
+          <p style="position:absolute;top:242px;margin:0px">P(no more than this much of the way&nbsp;done)</p>
+          <p style="position:absolute;top:492px;right:10px;margin:0px">0%</p>
+        </div>
+        <div>
+          <canvas id="progress_distr" width="500" height="500"></canvas>
+        </div>
+      </div>
+      <div style="position:absolute;left:292px;display:flex;flex-direction:row">
+        <p>0%</p>
+        <div style="float:right;position:absolute;left:492px">
+          <p>100%</p>
+        </div>
+      </div>
+      <br />
+      <div style="position:relative;left:350px">
+        <p>Proportion of required insights that have been&nbsp;discovered</p>
+      </div>
+    </div>
+    <br />
+    <button id="clear_button">Clear</button>
+
+    <h2>Pre-set&nbsp;priors</h2>
+
+    <p>Instead of drawing a cumulative distribution function, you can instead use a pre-set prior.  These priors are based on the <a href="https://en.wikipedia.org/wiki/Pareto_distribution">Pareto distribution</a>.  To make choice of the parameter more intuitive, we parameterize the distribution in terms of a probability <i>q</i>, equal to the probability that a doubling in number of insights (starting from the minimum number of insights) would result in a sufficient set of&nbsp;insights.  </p>
+
+    <p>Minimum plausible number of insights required: <input type="text" value="10" id="min_insights" /></p>
+    <p><i>q</i>: <input type="number" value="0.2" id="pareto_q"> <button id="pareto_button">Pareto distribution</button></p>
+    <p><button id="uniform_pareto_button">Pareto distribution, <i>q</i> ~ Uniform(0,1)</button>
+    <p><i>&alpha;</i>: <input type="number" value="1" id="alpha">
+    <i>&beta;</i>: <input type="number" value="1" id="beta">
+    <button id="beta_pareto_button">Pareto distribution, <i>q</i> ~ Beta(&alpha;, &beta;)</button></p>
+
+
+
+
+    <h2>Resulting&nbsp;timeline</h2>
+
+    <p>Assuming a linear increase in number of required insights over time, the following cumulative distribution function for time when all required insights are discovered is implied by these&nbsp;beliefs.</p>
+    <div id="timeline_placeholder" style="width:800px;height:400px"></div>
+    Adjust the maximum year displayed: <input type="range" min="2050" max="3000" value="2200" id="last_year" style="width:300px" />
+
+    <h1> Derivation </h1>
+
+    <p> How was this data generated?  Jessica Taylor, Jack Gallagher, and Baeo Maltinsky spent a few hours generating a list of <span class="caps">AI</span> insights that seemed around the same order of significance or more significant than the insight of <span class="caps">LSTM</span> (specifically, the insight of inventing <span class="caps">LSTM</span> given that RNNs were already invented).  The following is a plot of number of <span class="caps">AI</span> insights in our list over time since&nbsp;1850.</p>
+
+    <div id="insights_placeholder" style="width:800px;height:400px"></div>
+
+    <p>The model assumes that insights increase linearly over time.  The increase has been roughly linear since 1945, but this could change due to low hanging fruit, expanding research avenues, changes in the number and effectiveness of research institutions, and so on.  The model does not distinguish between insights in our list (which we selected according to some subjective estimation of importance) and specifically <i>required</i> insights; however, if the percentage of insights that are actually required stays somewhat constant over time, this does not significantly affect the&nbsp;timeline.</p>
+
+    <p>The list of insights and their years can be found in <a href="../docs/AI_insights.pdf">this document</a>.</p>
+
+
+<script src="../scripts/jquery.js" type="text/javascript"></script>
+    <script src="../scripts/jstat.js" type="text/javascript"></script>
+    <script src="../scripts/flot/jquery.flot.js" type="text/javascript"></script>
+    <script src="../scripts/insights.js" type="text/javascript"></script>
+
+
+  
+  </div><!-- /.entry-content -->
+</section>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div>
+        &copy; 2018 Median Group
+      </div>
+      <div class="ornament-div">
+        <img class="ornament" src="/theme/images/ornament1black.svg" />
+      </div>
+      <div>
+        <a href="mailto:info@median.org">info@mediangroup.org</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
