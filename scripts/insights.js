@@ -84,9 +84,9 @@ function samplePareto(min, q) {
 function drawProgress() {
   var canv = document.getElementById('progress_distr');
   var ctx = canv.getContext('2d');
-  ctx.fillStyle = 'rgb(255, 255, 255)';
+  ctx.fillStyle = 'rgb(254, 254, 254)';
   ctx.fillRect(0, 0, canv.width, canv.height)
-  ctx.strokeStyle = 'rgb(0, 200, 0)';
+  ctx.strokeStyle = 'rgb(219, 218, 215)';
   for (var i = 1; i <= 9; ++i) {
     ctx.lineWidth = i == 5 ? 3 : 1;
     ctx.beginPath();
@@ -99,7 +99,7 @@ function drawProgress() {
     ctx.lineTo(canv.width, i / 10 * canv.height);
     ctx.stroke()
   }
-  ctx.strokeStyle = 'rgb(0, 0, 200)';
+  ctx.strokeStyle = 'rgb(234, 211, 145)';
   ctx.lineWidth = 5;
   for (var i = 0; i < progressPoints.length - 1; ++i) {
     var pt1 = progressPoints[i];
@@ -109,7 +109,7 @@ function drawProgress() {
     ctx.lineTo(pt2[0] * canv.width, (1.0 - pt2[1]) * canv.height);
     ctx.stroke();
   }
-  ctx.fillStyle = 'rgb(0, 0, 200)';
+  ctx.fillStyle = 'rgb(234, 211, 145)';
   for (var i = 1; i < progressPoints.length - 1; ++i) {
     var pt = progressPoints[i];
     ctx.beginPath();
