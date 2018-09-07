@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>Median Group</title><link>/</link><description></description><lastBuildDate>Fri, 07 Sep 2018 14:08:28 -0700</lastBuildDate><item><title>Insight-based AI timelines model</title><link>/insights.html</link><description>
+    &lt;h1&gt; Insight-based &lt;span class="caps"&gt;AI&lt;/span&gt; timeline&amp;nbsp;model&lt;/h1&gt;
+    &lt;p&gt;
+    For various &amp;#8220;percentages of the way&amp;#8221; done &lt;span class="caps"&gt;AI&lt;/span&gt; research could be, in terms of percentage of the necessary insights discovered, what is the probability that &lt;span class="caps"&gt;AI&lt;/span&gt; research is not yet that percentage&amp;nbsp;done?
+    &lt;/p&gt;
+    &lt;div style="position:relative"&gt;
+      &lt;div style="display:flex;flex-direction:row"&gt;
+        &lt;div style="position:relative;min-width:300px"&gt;
+          &lt;p style="position:absolute;top:-8px;right:10px;margin:0px"&gt;100%&lt;/p&gt;
+          &lt;p style="position:absolute;top:242px;margin:0px"&gt;P(no more than this much of the way&amp;nbsp;done)&lt;/p&gt;
+          &lt;p style="position:absolute;top:492px;right:10px;margin:0px"&gt;0%&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;canvas id="progress_distr" width="500" height="500" style="border: 1px solid #545454; box-shadow: 0px 0px 2px 1px;"&gt;&lt;/canvas&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div style="position:absolute;left:292px;display:flex;flex-direction:row"&gt;
+        &lt;p&gt;0 …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Median Group</dc:creator><pubDate>Fri, 07 Sep 2018 14:08:28 -0700</pubDate><guid isPermaLink="false">tag:None,2018-09-07:/insights.html</guid></item><item><title>AGNI</title><link>/agni.html</link><description>&lt;p&gt;A proposal for improved forest fire&amp;nbsp;forecasting&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Baeo Maltinsky</dc:creator><pubDate>Fri, 07 Sep 2018 14:08:28 -0700</pubDate><guid isPermaLink="false">tag:None,2018-09-07:/agni.html</guid></item></channel></rss>

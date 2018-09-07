@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group</title><link href="/" rel="alternate"></link><link href="None/feed/all.atom.xml" rel="self"></link><id>/</id><updated>2018-09-07T14:08:28-07:00</updated><entry><title>Insight-based AI timelines model</title><link href="/insights.html" rel="alternate"></link><published>2018-09-07T14:08:28-07:00</published><updated>2018-09-07T14:08:28-07:00</updated><author><name>Median Group</name></author><id>tag:None,2018-09-07:/insights.html</id><summary type="html">
+    &lt;h1&gt; Insight-based &lt;span class="caps"&gt;AI&lt;/span&gt; timeline&amp;nbsp;model&lt;/h1&gt;
+    &lt;p&gt;
+    For various &amp;#8220;percentages of the way&amp;#8221; done &lt;span class="caps"&gt;AI&lt;/span&gt; research could be, in terms of percentage of the necessary insights discovered, what is the probability that &lt;span class="caps"&gt;AI&lt;/span&gt; research is not yet that percentage&amp;nbsp;done?
+    &lt;/p&gt;
+    &lt;div style="position:relative"&gt;
+      &lt;div style="display:flex;flex-direction:row"&gt;
+        &lt;div style="position:relative;min-width:300px"&gt;
+          &lt;p style="position:absolute;top:-8px;right:10px;margin:0px"&gt;100%&lt;/p&gt;
+          &lt;p style="position:absolute;top:242px;margin:0px"&gt;P(no more than this much of the way&amp;nbsp;done)&lt;/p&gt;
+          &lt;p style="position:absolute;top:492px;right:10px;margin:0px"&gt;0%&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;canvas id="progress_distr" width="500" height="500" style="border: 1px solid #545454; box-shadow: 0px 0px 2px 1px;"&gt;&lt;/canvas&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div style="position:absolute;left:292px;display:flex;flex-direction:row"&gt;
+        &lt;p&gt;0 …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+    &lt;h1&gt; Insight-based &lt;span class="caps"&gt;AI&lt;/span&gt; timeline&amp;nbsp;model&lt;/h1&gt;
+    &lt;p&gt;
+    For various &amp;#8220;percentages of the way&amp;#8221; done &lt;span class="caps"&gt;AI&lt;/span&gt; research could be, in terms of percentage of the necessary insights discovered, what is the probability that &lt;span class="caps"&gt;AI&lt;/span&gt; research is not yet that percentage&amp;nbsp;done?
+    &lt;/p&gt;
+    &lt;div style="position:relative"&gt;
+      &lt;div style="display:flex;flex-direction:row"&gt;
+        &lt;div style="position:relative;min-width:300px"&gt;
+          &lt;p style="position:absolute;top:-8px;right:10px;margin:0px"&gt;100%&lt;/p&gt;
+          &lt;p style="position:absolute;top:242px;margin:0px"&gt;P(no more than this much of the way&amp;nbsp;done)&lt;/p&gt;
+          &lt;p style="position:absolute;top:492px;right:10px;margin:0px"&gt;0%&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;canvas id="progress_distr" width="500" height="500" style="border: 1px solid #545454; box-shadow: 0px 0px 2px 1px;"&gt;&lt;/canvas&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div style="position:absolute;left:292px;display:flex;flex-direction:row"&gt;
+        &lt;p&gt;0%&lt;/p&gt;
+        &lt;div style="float:right;position:absolute;left:492px"&gt;
+          &lt;p&gt;100%&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;br /&gt;
+      &lt;div style="position:relative;left:350px"&gt;
+        &lt;p&gt;Proportion of required insights that have been&amp;nbsp;discovered&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br /&gt;
+    &lt;button id="clear_button"&gt;Clear&lt;/button&gt;
+
+    &lt;h2&gt;Pre-set&amp;nbsp;priors&lt;/h2&gt;
+
+    &lt;p&gt;Instead of drawing a cumulative distribution function, you can instead use a pre-set prior.  These priors are based on the &lt;a href="https://en.wikipedia.org/wiki/Pareto_distribution"&gt;Pareto distribution&lt;/a&gt;.  To make choice of the parameter more intuitive, we parameterize the distribution in terms of a probability &lt;i&gt;q&lt;/i&gt;, equal to the probability that a doubling in number of insights (starting from the minimum number of insights) would result in a sufficient set of&amp;nbsp;insights.  &lt;/p&gt;
+
+    &lt;p&gt;Minimum plausible number of insights required: &lt;input type="text" value="10" id="min_insights" /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;i&gt;q&lt;/i&gt;: &lt;input type="number" value="0.2" id="pareto_q"&gt; &lt;button id="pareto_button"&gt;Pareto distribution&lt;/button&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;button id="uniform_pareto_button"&gt;Pareto distribution, &lt;i&gt;q&lt;/i&gt; ~ Uniform(0,1)&lt;/button&gt;
+    &lt;p&gt;&lt;i&gt;&amp;alpha;&lt;/i&gt;: &lt;input type="number" value="1" id="alpha"&gt;
+    &lt;i&gt;&amp;beta;&lt;/i&gt;: &lt;input type="number" value="1" id="beta"&gt;
+    &lt;button id="beta_pareto_button"&gt;Pareto distribution, &lt;i&gt;q&lt;/i&gt; ~ Beta(&amp;alpha;, &amp;beta;)&lt;/button&gt;&lt;/p&gt;
+
+
+
+
+    &lt;h2&gt;Resulting&amp;nbsp;timeline&lt;/h2&gt;
+
+    &lt;p&gt;Assuming a linear increase in number of required insights over time, the following cumulative distribution function for time when all required insights are discovered is implied by these&amp;nbsp;beliefs.&lt;/p&gt;
+    &lt;div id="timeline_placeholder" style="width:800px;height:400px"&gt;&lt;/div&gt;
+    Adjust the maximum year displayed: &lt;input type="range" min="2050" max="3000" value="2200" id="last_year" style="width:300px" /&gt;
+
+    &lt;h1&gt; Derivation &lt;/h1&gt;
+
+    &lt;p&gt; How was this data generated?  Jessica Taylor, Jack Gallagher, and Baeo Maltinsky spent a few hours generating a list of &lt;span class="caps"&gt;AI&lt;/span&gt; insights that seemed around the same order of significance or more significant than the insight of &lt;span class="caps"&gt;LSTM&lt;/span&gt; (specifically, the insight of inventing &lt;span class="caps"&gt;LSTM&lt;/span&gt; given that RNNs were already invented).  The following is a plot of number of &lt;span class="caps"&gt;AI&lt;/span&gt; insights in our list over time since&amp;nbsp;1850.&lt;/p&gt;
+
+    &lt;div id="insights_placeholder" style="width:800px;height:400px"&gt;&lt;/div&gt;
+
+    &lt;p&gt;The model assumes that insights increase linearly over time.  The increase has been roughly linear since 1945, but this could change due to low hanging fruit, expanding research avenues, changes in the number and effectiveness of research institutions, and so on.  The model does not distinguish between insights in our list (which we selected according to some subjective estimation of importance) and specifically &lt;i&gt;required&lt;/i&gt; insights; however, if the percentage of insights that are actually required stays somewhat constant over time, this does not significantly affect the&amp;nbsp;timeline.&lt;/p&gt;
+
+    &lt;p&gt;The list of insights and their years can be found in &lt;a href="../docs/AI_insights.pdf"&gt;this document&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;script src="../scripts/jquery.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="../scripts/jstat.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="../scripts/flot/jquery.flot.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="../scripts/insights.js" type="text/javascript"&gt;&lt;/script&gt;
+
+
+  </content></entry><entry><title>AGNI</title><link href="/agni.html" rel="alternate"></link><published>2018-09-07T14:08:28-07:00</published><updated>2018-09-07T14:08:28-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2018-09-07:/agni.html</id><summary type="html">&lt;p&gt;A proposal for improved forest fire&amp;nbsp;forecasting&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="docs/agni.pdf"&gt;Download &lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</content></entry></feed>
