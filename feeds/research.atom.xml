@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group - research</title><link href="/" rel="alternate"></link><link href="None/feeds/research.atom.xml" rel="self"></link><id>/</id><updated>2018-09-07T14:08:28-07:00</updated><entry><title>Insight-based AI timelines model</title><link href="/insights.html" rel="alternate"></link><published>2018-09-07T14:08:28-07:00</published><updated>2018-09-07T14:08:28-07:00</updated><author><name>Median Group</name></author><id>tag:None,2018-09-07:/insights.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group - research</title><link href="/" rel="alternate"></link><link href="None/feeds/research.atom.xml" rel="self"></link><id>/</id><updated>2018-10-03T16:54:36-07:00</updated><entry><title>AGNI</title><link href="/agni.html" rel="alternate"></link><published>2018-10-03T16:54:36-07:00</published><updated>2018-10-03T16:54:36-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2018-10-03:/agni.html</id><summary type="html">&lt;p&gt;A proposal for improved forest fire&amp;nbsp;forecasting&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="docs/agni.pdf"&gt;Download &lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Insight-based AI timelines model</title><link href="/insights.html" rel="alternate"></link><published>2018-10-03T16:54:36-07:00</published><updated>2018-10-03T16:54:36-07:00</updated><author><name>Median Group</name></author><id>tag:None,2018-10-03:/insights.html</id><summary type="html">
     &lt;h1&gt; Insight-based &lt;span class="caps"&gt;AI&lt;/span&gt; timeline&amp;nbsp;model&lt;/h1&gt;
     &lt;p&gt;
     For various &amp;#8220;percentages of the way&amp;#8221; done &lt;span class="caps"&gt;AI&lt;/span&gt; research could be, in terms of percentage of the necessary insights discovered, what is the probability that &lt;span class="caps"&gt;AI&lt;/span&gt; research is not yet that percentage&amp;nbsp;done?
@@ -39,7 +39,7 @@
         &lt;/div&gt;
       &lt;/div&gt;
       &lt;br /&gt;
-      &lt;div style="position:relative;left:350px"&gt;
+      &lt;div style="position:relative;left:350px;width: fit-content"&gt;
         &lt;p&gt;Proportion of required insights that have been&amp;nbsp;discovered&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -83,4 +83,4 @@
     &lt;script src="../scripts/insights.js" type="text/javascript"&gt;&lt;/script&gt;
 
 
-  </content></entry><entry><title>AGNI</title><link href="/agni.html" rel="alternate"></link><published>2018-09-07T14:08:28-07:00</published><updated>2018-09-07T14:08:28-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2018-09-07:/agni.html</id><summary type="html">&lt;p&gt;A proposal for improved forest fire&amp;nbsp;forecasting&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="docs/agni.pdf"&gt;Download &lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</content></entry></feed>
+  </content></entry></feed>
