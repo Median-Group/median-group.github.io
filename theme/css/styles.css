@@ -118,7 +118,6 @@ hr {
   flex-shrink: 0;
   white-space: nowrap;
   overflow: hidden;
-  border-bottom: 1px solid #000;
 }
 
 .navigation ul {
