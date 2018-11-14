@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group - misc</title><link href="/" rel="alternate"></link><link href="None/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2018-11-13T12:00:00-08:00</updated><entry><title>How rapidly are GPUs improving in price performance?</title><link href="/gpu.html" rel="alternate"></link><published>2018-11-13T12:00:00-08:00</published><updated>2018-11-13T12:00:00-08:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2018-11-13:/gpu.html</id><summary type="html">&lt;p&gt;A Brief Look at Trends in &lt;span class="caps"&gt;GPU&lt;/span&gt;&amp;nbsp;price-performance&lt;/p&gt;</summary><content type="html">&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Many of the impressive results in deep learning in recent years have been achieved through massive investment in hardware needed for training, with projects like AlphaGo Zero using &lt;a href="https://www.nature.com/news/self-taught-ai-is-best-yet-at-strategy-game-go-1.22858#/ref-link-2"&gt;$25 million&lt;/a&gt; worth of computer hardware. Given this, improvements in price-performance of hardware used for deep learning will play an important role in determining the scale of projects in the coming&amp;nbsp;years.&lt;/p&gt;
+&lt;p&gt;While machine learning &lt;a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit"&gt;ASICs&lt;/a&gt; like TPUs are likely the future, the recent deep learning boom was powered by GPUs&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;. The architectures of TPUs and GPUs differ in important ways, but much of the design and fabrication process is similar and both are largely focused on efficient, parallelized arithmetic&lt;sup id="fnref-2"&gt;&lt;a class="footnote-ref" href="#fn-2"&gt;2&lt;/a&gt;&lt;/sup&gt;, so trends observed in GPUs can inform us about what to expect from&amp;nbsp;TPUs.&lt;/p&gt;
+&lt;p&gt;Commonly mentioned figures for the price-performance generalization of Moore&amp;#8217;s Law suggest that price-performance doubles roughly every two years, but this figure warranted further&amp;nbsp;investigation. &lt;/p&gt;
+&lt;h1 id="data"&gt;Data&lt;/h1&gt;
+&lt;p&gt;We constructed a &lt;a href="/data/gpu.csv"&gt;data set&lt;/a&gt; containing the model name, launch date, single precision performance in &lt;span class="caps"&gt;GFLOPS&lt;/span&gt;, and release price in non-inflation adjusted &lt;span class="caps"&gt;US&lt;/span&gt; dollars for 223 Nvidia and &lt;span class="caps"&gt;AMD&lt;/span&gt; GPUs (scraped from Wikipedia)&lt;sup id="fnref-3"&gt;&lt;a class="footnote-ref" href="#fn-3"&gt;3&lt;/a&gt;&lt;/sup&gt;. The data set covered almost two decades, so prices were adjusted to 2018 &lt;span class="caps"&gt;US&lt;/span&gt; dollars using the &lt;a href="https://fred.stlouisfed.org/series/CPIAUCNS"&gt;Consumer Price Index&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id="analysis"&gt;Analysis&lt;/h1&gt;
+&lt;p&gt;Fitting an exponential to the data-set yielded the&amp;nbsp;curve:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation}
+    f(t) \approx 14.2 e^{0.2 t}
+\end{equation}&lt;/div&gt;
+&lt;p&gt;&lt;img alt="GPU Price-Performance" src="/images/gpu_full.png"&gt;&lt;/p&gt;
+&lt;p&gt;This implies a doubling time of &lt;span class="math"&gt;\(\sim 3.5\)&lt;/span&gt; years. It should be noted that this is somewhat misleading because the price-performance curve isn&amp;#8217;t a clean exponential. Inspecting a log-plot suggests that price-performance has been in a distinctly slower growth regime since around&amp;nbsp;2012.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Log-plot of GPU price-performance" src="/images/gpu_log.png"&gt;&lt;/p&gt;
+&lt;p&gt;Fitting to data from 2012 or later yields the&amp;nbsp;curve:
+&lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation}
+    f(t) \approx 15.2 e^{0.176 t},
+\end{equation}&lt;/div&gt;
+&lt;p&gt;
+corresponding to a doubling time of ~3.9&amp;nbsp;years.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Log-plot of GPU price-performance" src="/images/gpu_log.png"&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-1"&gt;
+&lt;p&gt;GPUs are still more cost effective than TPUs, but have lower serial computation speed.&amp;#160;&lt;a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-2"&gt;
+&lt;p&gt;This is not nearly as true as with CPUs which have managed to extract performance improvements from &lt;a href="http://www.lighterra.com/papers/modernmicroprocessors/"&gt;increasingly arcane changes to control circuitry&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-3"&gt;
+&lt;p&gt;&lt;span class="caps"&gt;AI&lt;/span&gt; Impacts has a &lt;a href="https://docs.google.com/spreadsheets/d/1yqX2cENwkOxC26wV_sBOvV0NxHzzfmL6tU7StzrFXRc/edit#gid=51141192"&gt;similar data set&lt;/a&gt;.&amp;#160;&lt;a class="footnote-backref" href="#fnref-3" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content></entry></feed>
