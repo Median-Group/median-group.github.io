@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group - research</title><link href="/" rel="alternate"></link><link href="None/feeds/research.atom.xml" rel="self"></link><id>/</id><updated>2018-10-03T16:54:36-07:00</updated><entry><title>AGNI</title><link href="/agni.html" rel="alternate"></link><published>2018-10-03T16:54:36-07:00</published><updated>2018-10-03T16:54:36-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2018-10-03:/agni.html</id><summary type="html">&lt;p&gt;A proposal for improved forest fire&amp;nbsp;forecasting&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="docs/agni.pdf"&gt;Download &lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Insight-based AI timelines model</title><link href="/insights.html" rel="alternate"></link><published>2018-06-12T00:00:00-07:00</published><updated>2018-06-12T00:00:00-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2018-06-12:/insights.html</id><summary type="html">
+   &lt;noscript&gt;
+     &lt;p&gt;
+       Note: the demos on this page will not work with javascript&amp;nbsp;disabled. 
+     &lt;/p&gt;
+   &lt;/noscript&gt;
     &lt;h1&gt; Insight-based &lt;span class="caps"&gt;AI&lt;/span&gt; timeline&amp;nbsp;model&lt;/h1&gt;
     &lt;p&gt;
     For various &amp;#8220;percentages of the way&amp;#8221; done &lt;span class="caps"&gt;AI&lt;/span&gt; research could be, in terms of percentage of the necessary insights discovered, what is the probability that &lt;span class="caps"&gt;AI&lt;/span&gt; research is not yet that percentage&amp;nbsp;done?
@@ -7,16 +12,12 @@
     &lt;div style="position:relative"&gt;
       &lt;div style="display:flex;flex-direction:row"&gt;
         &lt;div style="position:relative;min-width:300px"&gt;
-          &lt;p style="position:absolute;top:-8px;right:10px;margin:0px"&gt;100%&lt;/p&gt;
-          &lt;p style="position:absolute;top:242px;margin:0px"&gt;P(no more than this much of the way&amp;nbsp;done)&lt;/p&gt;
-          &lt;p style="position:absolute;top:492px;right:10px;margin:0px"&gt;0%&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-          &lt;canvas id="progress_distr" width="500" height="500" style="border: 1px solid #545454; box-shadow: 0px 0px 2px 1px;"&gt;&lt;/canvas&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div style="position:absolute;left:292px;display:flex;flex-direction:row"&gt;
-        &lt;p&gt;0 …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+          &lt;p style="position:absolute;top:-8px;right:10px;margin:0px"&gt;100 …&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</summary><content type="html">
+   &lt;noscript&gt;
+     &lt;p&gt;
+       Note: the demos on this page will not work with javascript&amp;nbsp;disabled. 
+     &lt;/p&gt;
+   &lt;/noscript&gt;
     &lt;h1&gt; Insight-based &lt;span class="caps"&gt;AI&lt;/span&gt; timeline&amp;nbsp;model&lt;/h1&gt;
     &lt;p&gt;
     For various &amp;#8220;percentages of the way&amp;#8221; done &lt;span class="caps"&gt;AI&lt;/span&gt; research could be, in terms of percentage of the necessary insights discovered, what is the probability that &lt;span class="caps"&gt;AI&lt;/span&gt; research is not yet that percentage&amp;nbsp;done?
