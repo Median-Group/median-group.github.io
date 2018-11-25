@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Brain and Computation, Part&nbsp;1 - Median Group</title>
+    <link rel="stylesheet" type="text/css" href="/theme/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif"
+    rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" href="/theme/images/favicon.ico">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-wrapper">
+        <a href="/">
+        <img src="/theme/images/logo.png" class="logo" alt="Median Group logo"/>
+        </a>
+      </div>
+      <div class="headline">
+        <div class="title">Median Group</div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="navigation">
+        <div class="links-div">
+          <ul class="links">
+            <li class="nav-item"><a href="/">Home</a></li>
+            <li class="nav-separator"></li>
+            <li class="nav-item"><a href="/research">Research</a></li>
+            <li class="nav-separator"></li>
+            <li class="nav-item"><a href="/archives">Blog</a></li>
+            <li class="nav-separator"></li>
+            <li class="nav-item"><a href="/team">Team</a></li>
+            <li class="nav-separator"></li>
+            <li class="nav-item"><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="content">
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">The Brain and Computation, Part&nbsp;1 </h2>
+  </header>
+ <div class="entry-content">
+    <h1 id="measuring-computation">Measuring&nbsp;Computation</h1>
+<p>The computational performance of microprocessors can be quantified by measuring the number of floating-point arithmetic operations the processor can perform per second (<span class="caps">FLOPS</span>). This number is very useful for comparing different hardware being used for numerically intensive applications like scientific computing or mining <a href="https://en.wikipedia.org/wiki/Cryptocurrency">fake internet points</a>, but some have attempted to quantify the computation done by the human brain in these terms to reason about how difficult it would be to run a human-level intelligence on modern computing&nbsp;hardware.</p>
+<p>This post will discuss a few of the issues associated with measuring the computational performance of the brain with <span class="caps">FLOPS</span>, and a follow-up post will consider specific&nbsp;estimates.</p>
+<h1 id="does-it-make-sense-to-think-about-the-computational-capacity-of-the-brain-in-terms-of-flops">Does it make sense to think about the computational capacity of the brain in terms of <span class="caps">FLOPS</span>?</h1>
+<p>There is a line of thinking that goes something&nbsp;like:</p>
+<blockquote>
+<p>Neurons generate action potentials. Action potentials are stereotyped signals, so the computation that happens in the brain is essentially digital, so it makes sense to compare brains to digital computers, and synaptic operations are kind of like arithmetic&nbsp;operations.</p>
+</blockquote>
+<p>This may or may not be a good enough approximation, but it&#8217;s definitely a lossy&nbsp;approximation.</p>
+<h2 id="brains-probably-arent-bottlenecked-on-arithmetic">Brains probably aren&#8217;t bottlenecked on&nbsp;arithmetic</h2>
+<p>A common objection to measuring the performance of the brain in <span class="caps">FLOPS</span> is that computation in the brain isn&#8217;t bottlenecked by arithmetic capacity, but rather by information flow, so the capacity of the brain should be measured in <em>traversed edges per second</em> (<span class="caps">TEPS</span>) rather than <span class="caps">FLOPS</span>. Synaptic connections between neurons tend to be sparse and axons tend to be long, which seems to suggest a lot of neural tissue is dedicated to pushing signals around rather than performing arithmetic on them<sup id="fnref-1"><a class="footnote-ref" href="#fn-1">1</a></sup>.</p>
+<h2 id="brains-are-asynchronous">Brains are&nbsp;asynchronous</h2>
+<p>Microprocessors are clocked circuits. When a computation unfolds on a microprocessor, it proceeds in discrete, well-delineated steps with one occurring each processor cycle. This method of computation is fundamentally&nbsp;synchronous.</p>
+<p>Brains don&#8217;t have a clock: neurons fire when they fire, which usually isn&#8217;t very often (one to ten times a second), but is sometimes much faster (up to around 1000 Hz)<sup id="fnref-2"><a class="footnote-ref" href="#fn-2">2</a></sup>. And the phase of the neural spike trains also seem to be important<sup id="fnref-3"><a class="footnote-ref" href="#fn-3">3</a></sup>, which further complicates the&nbsp;comparison.</p>
+<h2 id="non-spiking-neurons">Non-spiking&nbsp;neurons</h2>
+<p>Many neurons <a href="https://en.wikipedia.org/wiki/Non-spiking_neuron">don&#8217;t even spike</a>, having graded, non-stereotyped potentials. The best-studied are the photo-receptive neurons in the retina, but they occur throughout the brain and it&#8217;s unclear how to integrate them into the larger computational picture of the&nbsp;brain.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>This post was not meant to be comprehensive, and is merely meant to highlight the strangeness and limitations of thinking of the limits of neural computation in terms of <span class="caps">FLOPS</span>.</p>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn-1">
+<p>Limitations in the ability of evolution to modify the basic vertebrate developmental plan lead can lead to bizarre inefficiencies, like the optic nerve needing to carry signals <a href="https://en.wikipedia.org/wiki/Lateral_geniculate_nucleus">from the retina to the back of the head</a> before being processed in the visual cortex, or in the case of giraffes the laryngeal nerve needing to take a <a href="https://en.wikipedia.org/wiki/Recurrent_laryngeal_nerve#Evidence_of_evolution">&gt;4 meter detour</a>.&#160;<a class="footnote-backref" href="#fnref-1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn-2">
+<p>See <a href="https://en.wikipedia.org/wiki/Neural_coding#Sparse_coding">sparse coding</a>.&#160;<a class="footnote-backref" href="#fnref-2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn-3">
+<p>See <a href="https://en.wikipedia.org/wiki/Neural_coding#Phase-of-firing_code">phase coding</a>.&#160;<a class="footnote-backref" href="#fnref-3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+  </div><!-- /.entry-content -->
+</section>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div>
+        &copy; 2018 Median Group
+      </div>
+      <div class="ornament-div">
+        <img class="ornament" src="/theme/images/ornament1black.svg" />
+      </div>
+      <div>
+        <a href="mailto:info@median.org">info@mediangroup.org</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
