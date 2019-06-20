@@ -1,5 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group</title><link href="/" rel="alternate"></link><link href="None/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2019-03-24T00:00:00-07:00</updated><entry><title>Feasibility of Training an AGI using Deep Reinforcement Learning: A Very Rough Estimate</title><link href="/rough_agi.html" rel="alternate"></link><published>2019-03-24T00:00:00-07:00</published><updated>2019-03-24T00:00:00-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-03-24:/rough_agi.html</id><summary type="html">&lt;p&gt;Exploring a suggested scenario for near-term &lt;span class="caps"&gt;AGI&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Several months ago, we were presented with a scenario for how artificial general intelligence (&lt;span class="caps"&gt;AGI&lt;/span&gt;) may be achieved in the near future. We found the approach surprising, so we attempted to produce a rough model to investigate its feasibility. The document presents the model and its&amp;nbsp;conclusions.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group</title><link href="/" rel="alternate"></link><link href="None/feeds/all-en.atom.xml" rel="self"></link><id>/</id><updated>2019-06-19T23:42:03-07:00</updated><entry><title>Revisting the Insights model</title><link href="/insights2.html" rel="alternate"></link><published>2019-06-19T23:42:03-07:00</published><updated>2019-06-19T23:42:03-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-06-19:/insights2.html</id><summary type="html">
+    &lt;link rel="stylesheet" type="text/css" href="/theme/css/nouislider.min.css"&gt;
+    &lt;script async src="/scripts/nouislider.min.js"&gt;&lt;/script&gt;
+    &lt;script async src="/scripts/insights2.js" type="module"&gt;&lt;/script&gt;
+    &lt;section id="intro"&gt;
+      &lt;p&gt;
+        &lt;small&gt;
+          Note: This demo is in beta, and you may experience issues such as strange numerical behavior at this time.
+        &lt;/small&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        Last year, we released our &lt;a href="http://mediangroup.org/insights"&gt;insights-based model&lt;/a&gt; that generated a projected timeline using historical data and a prior distribution. We&amp;#8217;ve revisited it to address its limitations and improve the data …&lt;/p&gt;&lt;/section&gt;</summary><content type="html">
+    &lt;link rel="stylesheet" type="text/css" href="/theme/css/nouislider.min.css"&gt;
+    &lt;script async src="/scripts/nouislider.min.js"&gt;&lt;/script&gt;
+    &lt;script async src="/scripts/insights2.js" type="module"&gt;&lt;/script&gt;
+    &lt;section id="intro"&gt;
+      &lt;p&gt;
+        &lt;small&gt;
+          Note: This demo is in beta, and you may experience issues such as strange numerical behavior at this time.
+        &lt;/small&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        Last year, we released our &lt;a href="http://mediangroup.org/insights"&gt;insights-based model&lt;/a&gt; that generated a projected timeline using historical data and a prior distribution. We&amp;#8217;ve revisited it to address its limitations and improve the data it draws&amp;nbsp;from.
+      &lt;/p&gt;
+      &lt;p&gt;
+        The model relies on the assumption that progress in &lt;span class="caps"&gt;AI&lt;/span&gt; relies on accumulating &lt;em&gt;insights&lt;/em&gt;, fundamental advances in our understanding, that allow for improvements in capacity without increase in resources expended. This choice makes an attempt to separate out the effects of true technological advancement from the effects of an increase in computing power devoted to a problem, both of which can increase the capacity of machine intelligence to solve complex problems. Computational power is an expensive, finite resource, and without a paradigm-shifting improvement in computing itself, precise allocation of that power alone will not be enough to continue advancing &lt;span class="caps"&gt;AI&lt;/span&gt;&amp;#8217;s problem-solving&amp;nbsp;capabilities.
+      &lt;/p&gt;
+      &lt;p&gt;
+        The interactive model below provides two methods of capturing a prior about how many more advances in understanding are required to achieve human-level machine intelligence. Based on that prior, and on the pace of insight discovery during a particular historical period, we compute a probability distribution over time of the likelihood humans will develop human-level &lt;span class="caps"&gt;AI&lt;/span&gt;. Results of this calculation are shown in the &amp;#8220;Implied timeline&amp;#8221; graph&amp;nbsp;below.
+      &lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id="dist"&gt;
+      &lt;h2&gt;Step 1: Specify a prior for current&amp;nbsp;progress&lt;/h2&gt;
+
+      &lt;h3&gt;Option A: Draw a&amp;nbsp;distribution&lt;/h3&gt;
+      &lt;p&gt;
+        For various &amp;#8220;percentages of the way&amp;#8221; done &lt;span class="caps"&gt;AI&lt;/span&gt; research could be, in terms of percentage of the necessary insights discovered, what is the probability that &lt;span class="caps"&gt;AI&lt;/span&gt; research is not yet that percentage&amp;nbsp;done?
+      &lt;/p&gt;
+      &lt;p&gt;
+        The graph below allows you to draw a distribution of how likely it is we have achieved a particular portion of the insights required for human-level machine&amp;nbsp;intelligence.
+      &lt;/p&gt;
+
+      &lt;canvas width="500" height="500" id="progress_dist"&gt;Click Me&lt;/canvas&gt;
+      &lt;div style="width: 500px; text-align: center;"&gt;
+        &lt;button id="reset"&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;h3&gt;Option B: Pre-set priors from Pareto&amp;nbsp;distribution&lt;/h3&gt;
+      &lt;p&gt;
+        Instead of drawing a cumulative distribution function, you can instead use a pre-set prior based on a &lt;a href="https://en.wikipedia.org/wiki/Pareto_distribution"&gt;Pareto distribution&lt;/a&gt;.
+      &lt;/p&gt;
+      &lt;p&gt;
+        To make the choice of Pareto distribution more intuitive, we parameterize the distribution in terms of a probability &lt;em&gt;q&lt;/em&gt;, equal to the probability that a doubling in number of insights (starting from the minimum number of insights) would result in a sufficient set of insights. &lt;em&gt;q&lt;/em&gt; can be set directly, uniformly sampled between 0 and 1, or defined with a beta&amp;nbsp;distribution.
+      &lt;/p&gt;
+      &lt;input type="number" value="10" min="1" id="min_insights" hidden="true"&gt;
+
+      &lt;div style="display:flex; justify-content: space-between; flex-wrap: wrap; text-align: center;"&gt;
+        &lt;div&gt;
+          &lt;h4&gt;Set &lt;em&gt;q&lt;/em&gt;&amp;nbsp;directly&lt;/h4&gt;
+          &lt;label for="pareto_q"&gt;&lt;em&gt;q&lt;/em&gt;&lt;/label&gt;
+          &lt;input type="number" value="0.2" id="pareto_q" step="0.05" min="0.05" max="0.95"&gt;
+          &lt;br&gt;
+          &lt;button id="pareto_btn"&gt;
+            Set &lt;em&gt;q&lt;/em&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+          &lt;h4&gt;Sample &lt;em&gt;q&lt;/em&gt; uniformly over&amp;nbsp;(0,1)&lt;/h4&gt;
+          &lt;button id="uniform_pareto_btn"&gt;
+            Sample &lt;em&gt;q&lt;/em&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+          &lt;h4&gt;Sample &lt;em&gt;q&lt;/em&gt; with Beta(&amp;alpha;,&amp;nbsp;&amp;beta;)&lt;/h4&gt;
+          &lt;label for="alpha"&gt;&lt;em&gt;&amp;alpha;&lt;/em&gt;:&lt;/label&gt;
+          &lt;input type="number" value="1" id="alpha"&gt;
+          &lt;br&gt;
+          &lt;label for="alpha"&gt;&lt;em&gt;&amp;beta;&lt;/em&gt;:&lt;/label&gt;
+          &lt;input type="number" value="1" id="beta"&gt;
+          &lt;br&gt;
+          &lt;button id="beta_pareto_btn"&gt;
+            Sample &lt;em&gt;q&lt;/em&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;p&gt;
+        &lt;small&gt;
+          Note: The simulator can be very slow for larger values of &lt;em&gt;q&lt;/em&gt;, as most of the samples need to be thrown away.
+        &lt;/small&gt;
+      &lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id="insights"&gt;
+      &lt;h2&gt;Step 2: Specify pace of&amp;nbsp;progress&lt;/h2&gt;
+      &lt;p&gt;
+        Which period in history is most representative of the future pace of &lt;span class="caps"&gt;AI&lt;/span&gt; insight discovery?
+        &lt;p&gt;
+          The graph below plots the aggregate of insights discovered over time and allows selection of a particular period of history in &lt;span class="caps"&gt;AI&lt;/span&gt; research. The curve fit to that period (linear, exponential, or sigmoidal) is used to project the future distribution of&amp;nbsp;discoveries.
+        &lt;/p&gt;
+        &lt;canvas width="500" height="300" id="insights_plot"&gt;&lt;/canvas&gt;
+        &lt;div style="width: 500px;"&gt;
+          &lt;div id="year_slider"&gt;&lt;/div&gt;
+          &lt;output id="year_range" style="display: block; text-align: center; margin-top: .5em;"&gt;
+          &lt;/output&gt;
+        &lt;/div&gt;
+        &lt;br&gt;
+        &lt;label for="regression"&gt;Regression mode:&lt;/label&gt;
+        &lt;select id="regression"&gt;
+          &lt;option value="Linear"&gt;Linear&lt;/option&gt;
+          &lt;option value="Exponential"&gt;Exponential&lt;/option&gt;
+          &lt;option value="Sigmoidal"&gt;Sigmoidal&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/section&gt;
+
+    &lt;section id="timeline" style="margin-top: 3em"&gt;
+      &lt;h2&gt;Result: Implied&amp;nbsp;timeline&lt;/h2&gt;
+      &lt;canvas id="timeline_plot" width="500" height="300"&gt;&lt;/canvas&gt;
+      &lt;div id="last_year" style="width: 500px;"&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id="explanations"&gt;
+      &lt;!--Colleen can you write about the process of updating the old data set&gt;&lt;/--&gt;
+    &lt;/section&gt;
+
+  </content></entry><entry><title>Feasibility of Training an AGI using Deep Reinforcement Learning: A Very Rough Estimate</title><link href="/rough_agi.html" rel="alternate"></link><published>2019-03-24T00:00:00-07:00</published><updated>2019-03-24T00:00:00-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-03-24:/rough_agi.html</id><summary type="html">&lt;p&gt;Exploring a suggested scenario for near-term &lt;span class="caps"&gt;AGI&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Several months ago, we were presented with a scenario for how artificial general intelligence (&lt;span class="caps"&gt;AGI&lt;/span&gt;) may be achieved in the near future. We found the approach surprising, so we attempted to produce a rough model to investigate its feasibility. The document presents the model and its&amp;nbsp;conclusions.&lt;/p&gt;
 &lt;p&gt;The usual cliches about the folly of trying to predict the future go without saying and this shouldn&amp;#8217;t be treated as a rigorous estimate, but hopefully it can give a loose, rough sense of some of the relevant quantities involved. The notebook and the data used for it can be found in the Median Group numbers GitHub repo if the reader is interested in using different quantities or changing the structure of the model. If the reader is interested in a more general approach based on the rate of theoretical progress, see our &lt;a href="http://mediangroup.org/insights"&gt;Insights model&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href="docs/Feasibility of Training an AGI using Deep Reinforcement Learning, A Very Rough Estimate.pdf"&gt;Download &lt;span class="caps"&gt;PDF&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>The Brain and Computation</title><link href="/brain1.html" rel="alternate"></link><published>2018-11-24T00:00:00-08:00</published><updated>2018-11-24T00:00:00-08:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2018-11-24:/brain1.html</id><summary type="html">&lt;h1 id="measuring-computation"&gt;Measuring&amp;nbsp;Computation&lt;/h1&gt;
 &lt;p&gt;The computational performance of microprocessors can be quantified by measuring the number of floating-point arithmetic operations the processor can perform per second (&lt;span class="caps"&gt;FLOPS&lt;/span&gt;). This number is very useful for comparing different hardware being used for numerically intensive applications like scientific computing or mining &lt;a href="https://en.wikipedia.org/wiki/Cryptocurrency"&gt;fake internet points&lt;/a&gt;, but some …&lt;/p&gt;</summary><content type="html">&lt;h1 id="measuring-computation"&gt;Measuring&amp;nbsp;Computation&lt;/h1&gt;
