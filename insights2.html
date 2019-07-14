@@ -88,7 +88,7 @@
         Instead of drawing a cumulative distribution function, you can instead use a pre-set prior based on a <a href="https://en.wikipedia.org/wiki/Pareto_distribution">Pareto distribution</a>.
       </p>
       <p>
-        To make the choice of Pareto distribution more intuitive, we parameterize the distribution in terms of a probability <em>q</em>, equal to the probability that a doubling in number of insights (starting from the minimum number of insights) would result in a sufficient set of insights. <em>q</em> can be set directly, uniformly sampled between 0 and 1, or defined with a beta&nbsp;distribution.
+        To make the choice of Pareto distribution more intuitive, we parameterize the distribution in terms of a probability <em>q</em>, equal to the probability that a doubling in number of insights (starting from the minimum number of insights) would result in a sufficient set of insights. <em>q</em> can be set directly, or we can sample from a mixture of Pareto distirbutions, where the <em>q</em> parameters are sampled from a uniform distribution or a beta&nbsp;distribution.
       </p>
       <input type="number" value="10" min="1" id="min_insights" hidden="true">
       <div>

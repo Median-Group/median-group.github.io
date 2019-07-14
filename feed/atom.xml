@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group</title><link href="/" rel="alternate"></link><link href="None/feed/atom.xml" rel="self"></link><id>/</id><updated>2019-07-13T17:26:29-07:00</updated><entry><title>Revisting the Insights model</title><link href="/insights2.html" rel="alternate"></link><published>2019-07-13T17:26:29-07:00</published><updated>2019-07-13T17:26:29-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-07-13:/insights2.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group</title><link href="/" rel="alternate"></link><link href="None/feed/atom.xml" rel="self"></link><id>/</id><updated>2019-07-13T17:57:57-07:00</updated><entry><title>Revisting the Insights model</title><link href="/insights2.html" rel="alternate"></link><published>2019-07-13T17:57:57-07:00</published><updated>2019-07-13T17:57:57-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-07-13:/insights2.html</id><summary type="html">
     &lt;link rel="stylesheet" type="text/css" href="/theme/css/nouislider.min.css"&gt;
     &lt;script async src="/scripts/nouislider.min.js"&gt;&lt;/script&gt;
     &lt;script async src="/scripts/insights2.js" type="module"&gt;&lt;/script&gt;
@@ -52,7 +52,7 @@
         Instead of drawing a cumulative distribution function, you can instead use a pre-set prior based on a &lt;a href="https://en.wikipedia.org/wiki/Pareto_distribution"&gt;Pareto distribution&lt;/a&gt;.
       &lt;/p&gt;
       &lt;p&gt;
-        To make the choice of Pareto distribution more intuitive, we parameterize the distribution in terms of a probability &lt;em&gt;q&lt;/em&gt;, equal to the probability that a doubling in number of insights (starting from the minimum number of insights) would result in a sufficient set of insights. &lt;em&gt;q&lt;/em&gt; can be set directly, uniformly sampled between 0 and 1, or defined with a beta&amp;nbsp;distribution.
+        To make the choice of Pareto distribution more intuitive, we parameterize the distribution in terms of a probability &lt;em&gt;q&lt;/em&gt;, equal to the probability that a doubling in number of insights (starting from the minimum number of insights) would result in a sufficient set of insights. &lt;em&gt;q&lt;/em&gt; can be set directly, or we can sample from a mixture of Pareto distirbutions, where the &lt;em&gt;q&lt;/em&gt; parameters are sampled from a uniform distribution or a beta&amp;nbsp;distribution.
       &lt;/p&gt;
       &lt;input type="number" value="10" min="1" id="min_insights" hidden="true"&gt;
       &lt;div&gt;
