@@ -38,23 +38,28 @@ export class State {
 */
   draw_dist(): void;
 /**
-* @param {number} min 
-* @param {number} q 
-* @returns {boolean} 
+* @param {number} n 
+* @returns {void} 
 */
-  set_pareto(min: number, q: number): boolean;
+  set_num_samples(n: number): void;
 /**
 * @param {number} min 
-* @returns {boolean} 
+* @param {number} q 
+* @returns {void} 
 */
-  set_pareto_uniform(min: number): boolean;
+  set_pareto(min: number, q: number): void;
+/**
+* @param {number} min 
+* @returns {void} 
+*/
+  set_pareto_uniform(min: number): void;
 /**
 * @param {number} min 
 * @param {number} alpha 
 * @param {number} beta 
-* @returns {boolean} 
+* @returns {void} 
 */
-  set_pareto_beta(min: number, alpha: number, beta: number): boolean;
+  set_pareto_beta(min: number, alpha: number, beta: number): void;
 /**
 * @returns {void} 
 */

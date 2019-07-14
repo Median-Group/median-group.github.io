@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group</title><link href="/" rel="alternate"></link><link href="None/feed/all.atom.xml" rel="self"></link><id>/</id><updated>2019-06-19T23:42:30-07:00</updated><entry><title>Revisting the Insights model</title><link href="/insights2.html" rel="alternate"></link><published>2019-06-19T23:42:30-07:00</published><updated>2019-06-19T23:42:30-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-06-19:/insights2.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group</title><link href="/" rel="alternate"></link><link href="None/feed/all.atom.xml" rel="self"></link><id>/</id><updated>2019-07-13T17:26:29-07:00</updated><entry><title>Revisting the Insights model</title><link href="/insights2.html" rel="alternate"></link><published>2019-07-13T17:26:29-07:00</published><updated>2019-07-13T17:26:29-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-07-13:/insights2.html</id><summary type="html">
     &lt;link rel="stylesheet" type="text/css" href="/theme/css/nouislider.min.css"&gt;
     &lt;script async src="/scripts/nouislider.min.js"&gt;&lt;/script&gt;
     &lt;script async src="/scripts/insights2.js" type="module"&gt;&lt;/script&gt;
@@ -55,6 +55,10 @@
         To make the choice of Pareto distribution more intuitive, we parameterize the distribution in terms of a probability &lt;em&gt;q&lt;/em&gt;, equal to the probability that a doubling in number of insights (starting from the minimum number of insights) would result in a sufficient set of insights. &lt;em&gt;q&lt;/em&gt; can be set directly, uniformly sampled between 0 and 1, or defined with a beta&amp;nbsp;distribution.
       &lt;/p&gt;
       &lt;input type="number" value="10" min="1" id="min_insights" hidden="true"&gt;
+      &lt;div&gt;
+        &lt;h4&gt;&lt;label for="num_samples"&gt;Number of samples to take when running the simulation&lt;/label&gt;&lt;/h4&gt;
+        &lt;input type="number" value="5000" min="1000" max="20000" step="1000" id="num_samples"&gt;
+      &lt;/div&gt;
 
       &lt;div style="display:flex; justify-content: space-between; flex-wrap: wrap; text-align: center;"&gt;
         &lt;div&gt;

@@ -257,28 +257,35 @@ export class State {
         return wasm.state_draw_dist(this.ptr);
     }
     /**
-    * @param {number} min
-    * @param {number} q
-    * @returns {boolean}
+    * @param {number} n
+    * @returns {void}
     */
-    set_pareto(min, q) {
-        return (wasm.state_set_pareto(this.ptr, min, q)) !== 0;
+    set_num_samples(n) {
+        return wasm.state_set_num_samples(this.ptr, n);
     }
     /**
     * @param {number} min
-    * @returns {boolean}
+    * @param {number} q
+    * @returns {void}
+    */
+    set_pareto(min, q) {
+        return wasm.state_set_pareto(this.ptr, min, q);
+    }
+    /**
+    * @param {number} min
+    * @returns {void}
     */
     set_pareto_uniform(min) {
-        return (wasm.state_set_pareto_uniform(this.ptr, min)) !== 0;
+        return wasm.state_set_pareto_uniform(this.ptr, min);
     }
     /**
     * @param {number} min
     * @param {number} alpha
     * @param {number} beta
-    * @returns {boolean}
+    * @returns {void}
     */
     set_pareto_beta(min, alpha, beta) {
-        return (wasm.state_set_pareto_beta(this.ptr, min, alpha, beta)) !== 0;
+        return wasm.state_set_pareto_beta(this.ptr, min, alpha, beta);
     }
     /**
     * @returns {void}
@@ -497,26 +504,6 @@ function init(module) {
         mem[ret / 4 + 1] = retlen;
 
     };
-    imports.wbg.__wbg_new_59cb74e423758ede = function() {
-        return addHeapObject(new Error());
-    };
-    imports.wbg.__wbg_stack_558ba5917b466edd = function(ret, arg0) {
-
-        const retptr = passStringToWasm(getObject(arg0).stack);
-        const retlen = WASM_VECTOR_LEN;
-        const mem = getUint32Memory();
-        mem[ret / 4] = retptr;
-        mem[ret / 4 + 1] = retlen;
-
-    };
-    imports.wbg.__wbg_error_4bb6c2a97407129a = function(arg0, arg1) {
-        let varg0 = getStringFromWasm(arg0, arg1);
-
-        varg0 = varg0.slice();
-        wasm.__wbindgen_free(arg0, arg1 * 1);
-
-        console.error(varg0);
-    };
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         let varg0 = getStringFromWasm(arg0, arg1);
         throw new Error(varg0);
@@ -527,20 +514,20 @@ function init(module) {
     imports.wbg.__widl_f_height_HTMLCanvasElement = function(arg0) {
         return getObject(arg0).height;
     };
-    imports.wbg.__widl_f_begin_path_CanvasRenderingContext2D = function(arg0) {
-        getObject(arg0).beginPath();
-    };
-    imports.wbg.__widl_f_stroke_CanvasRenderingContext2D = function(arg0) {
-        getObject(arg0).stroke();
-    };
     imports.wbg.__widl_f_set_stroke_style_CanvasRenderingContext2D = function(arg0, arg1) {
         getObject(arg0).strokeStyle = getObject(arg1);
+    };
+    imports.wbg.__widl_f_begin_path_CanvasRenderingContext2D = function(arg0) {
+        getObject(arg0).beginPath();
     };
     imports.wbg.__widl_f_move_to_CanvasRenderingContext2D = function(arg0, arg1, arg2) {
         getObject(arg0).moveTo(arg1, arg2);
     };
     imports.wbg.__widl_f_line_to_CanvasRenderingContext2D = function(arg0, arg1, arg2) {
         getObject(arg0).lineTo(arg1, arg2);
+    };
+    imports.wbg.__widl_f_stroke_CanvasRenderingContext2D = function(arg0) {
+        getObject(arg0).stroke();
     };
     imports.wbg.__widl_f_fill_rect_CanvasRenderingContext2D = function(arg0, arg1, arg2, arg3, arg4) {
         getObject(arg0).fillRect(arg1, arg2, arg3, arg4);

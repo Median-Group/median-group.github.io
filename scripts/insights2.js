@@ -9,6 +9,11 @@ wasm.default("/scripts/pkg/insights2_bg.wasm").then(function() {
   // Progress distribution
   const prog_dist = document.getElementById('progress_dist');
 
+  const num_samples = document.getElementById('num_samples');
+  num_samples.addEventListener("change", function() {
+    state.set_num_samples(num_samples.value);
+  });
+
   const reset_btn = document.getElementById('reset');
   const pareto_btn = document.getElementById('pareto_btn');
   const pareto_uni_btn = document.getElementById('uniform_pareto_btn');
@@ -26,22 +31,15 @@ wasm.default("/scripts/pkg/insights2_bg.wasm").then(function() {
   });
 
   pareto_uni_btn.addEventListener("click", function () {
-    if (state.set_pareto_uniform(min_insights.value)) {
-      state.draw_dist();
-      state.draw_timeline();
-    } else {
-      // TODO Alert user q is too high
-      console.log("q too high");
-    }
+    state.set_pareto_uniform(min_insights.value)
+    state.draw_dist();
+    state.draw_timeline();
   });
 
   pareto_beta_btn.addEventListener("click", function () {
-    if (state.set_pareto_beta(min_insights.value, alpha.value, beta.value)) {
-      state.draw_dist();
-      state.draw_timeline();
-    } else {
-      console.log("q too high");
-    }
+    state.set_pareto_beta(min_insights.value, alpha.value, beta.value);
+    state.draw_dist();
+    state.draw_timeline();
   });
 
   reset_btn.addEventListener("click", function () {
@@ -59,7 +57,7 @@ wasm.default("/scripts/pkg/insights2_bg.wasm").then(function() {
     state.draw_timeline();
   }
 
-  // Insights
+  // Insights 
   const year_slider = document.getElementById('year_slider');
   const range = document.getElementById('year_range');
   const reg = document.getElementById('regression');
@@ -75,9 +73,8 @@ wasm.default("/scripts/pkg/insights2_bg.wasm").then(function() {
     connect: true,
     range: {
       'min': -600,
-      '25%': 1100,
-      '50%': 1700,
-      '75%': 1900,
+      '45%': 250,
+      '50%': 1650,
       'max': 2016
     }
   });
@@ -100,7 +97,7 @@ wasm.default("/scripts/pkg/insights2_bg.wasm").then(function() {
     start: 2200,
     range: {
       'min': 2050,
-      'max': 3000,
+      'max': 3500,
     }
   }
   );
