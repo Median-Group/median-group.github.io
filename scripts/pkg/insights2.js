@@ -78,28 +78,6 @@ function getObject(idx) { return heap[idx]; }
 
 let heap_next = heap.length;
 
-function dropObject(idx) {
-    if (idx < 36) return;
-    heap[idx] = heap_next;
-    heap_next = idx;
-}
-
-function takeObject(idx) {
-    const ret = getObject(idx);
-    dropObject(idx);
-    return ret;
-}
-
-function getArrayU8FromWasm(ptr, len) {
-    return getUint8Memory().subarray(ptr / 1, ptr / 1 + len);
-}
-
-let cachedTextDecoder = new TextDecoder('utf-8');
-
-function getStringFromWasm(ptr, len) {
-    return cachedTextDecoder.decode(getUint8Memory().subarray(ptr, ptr + len));
-}
-
 function addHeapObject(obj) {
     if (heap_next === heap.length) heap.push(heap.length + 1);
     const idx = heap_next;
@@ -113,6 +91,18 @@ function handleError(e) {
     wasm.__wbindgen_exn_store(addHeapObject(e));
 }
 
+function dropObject(idx) {
+    if (idx < 36) return;
+    heap[idx] = heap_next;
+    heap_next = idx;
+}
+
+function takeObject(idx) {
+    const ret = getObject(idx);
+    dropObject(idx);
+    return ret;
+}
+
 let cachegetUint32Memory = null;
 function getUint32Memory() {
     if (cachegetUint32Memory === null || cachegetUint32Memory.buffer !== wasm.memory.buffer) {
@@ -123,6 +113,12 @@ function getUint32Memory() {
 
 function isLikeNone(x) {
     return x === undefined || x === null;
+}
+
+let cachedTextDecoder = new TextDecoder('utf-8');
+
+function getStringFromWasm(ptr, len) {
+    return cachedTextDecoder.decode(getUint8Memory().subarray(ptr, ptr + len));
 }
 
 function debugString(val) {
@@ -308,49 +304,15 @@ function init(module) {
     let result;
     const imports = {};
     imports.wbg = {};
-    imports.wbg.__wbindgen_object_drop_ref = function(arg0) {
-        takeObject(arg0);
-    };
-    imports.wbg.__wbg_getRandomValues_1ef11e888e5228e9 = function(arg0, arg1, arg2) {
-        let varg1 = getArrayU8FromWasm(arg1, arg2);
-        getObject(arg0).getRandomValues(varg1);
-    };
-    imports.wbg.__wbg_randomFillSync_1b52c8482374c55b = function(arg0, arg1, arg2) {
-        let varg1 = getArrayU8FromWasm(arg1, arg2);
-        getObject(arg0).randomFillSync(varg1);
-    };
-    imports.wbg.__wbg_new_3a746f2619705add = function(arg0, arg1) {
-        let varg0 = getStringFromWasm(arg0, arg1);
-        return addHeapObject(new Function(varg0));
-    };
-    imports.wbg.__wbg_call_f54d3a6dadb199ca = function(arg0, arg1) {
-        return addHeapObject(getObject(arg0).call(getObject(arg1)));
-    };
-    imports.wbg.__wbindgen_jsval_eq = function(arg0, arg1) {
-        return getObject(arg0) === getObject(arg1);
-    };
-    imports.wbg.__wbg_self_ac379e780a0d8b94 = function(arg0) {
-        return addHeapObject(getObject(arg0).self);
-    };
-    imports.wbg.__wbg_require_6461b1e9a0d7c34a = function(arg0, arg1) {
-        let varg0 = getStringFromWasm(arg0, arg1);
-        return addHeapObject(require(varg0));
-    };
-    imports.wbg.__wbg_crypto_1e4302b85d4f64a2 = function(arg0) {
-        return addHeapObject(getObject(arg0).crypto);
-    };
-    imports.wbg.__wbindgen_is_undefined = function(arg0) {
-        return getObject(arg0) === undefined;
-    };
-    imports.wbg.__wbg_getRandomValues_1b4ba144162a5c9e = function(arg0) {
-        return addHeapObject(getObject(arg0).getRandomValues);
-    };
     imports.wbg.__wbg_stringify_1459392978b44368 = function(arg0) {
         try {
             return addHeapObject(JSON.stringify(getObject(arg0)));
         } catch (e) {
             handleError(e);
         }
+    };
+    imports.wbg.__wbindgen_object_drop_ref = function(arg0) {
+        takeObject(arg0);
     };
     imports.wbg.__wbindgen_string_get = function(arg0, arg1) {
         const obj = getObject(arg0);
@@ -508,12 +470,6 @@ function init(module) {
         let varg0 = getStringFromWasm(arg0, arg1);
         throw new Error(varg0);
     };
-    imports.wbg.__widl_f_width_HTMLCanvasElement = function(arg0) {
-        return getObject(arg0).width;
-    };
-    imports.wbg.__widl_f_height_HTMLCanvasElement = function(arg0) {
-        return getObject(arg0).height;
-    };
     imports.wbg.__widl_f_set_stroke_style_CanvasRenderingContext2D = function(arg0, arg1) {
         getObject(arg0).strokeStyle = getObject(arg1);
     };
@@ -528,6 +484,12 @@ function init(module) {
     };
     imports.wbg.__widl_f_stroke_CanvasRenderingContext2D = function(arg0) {
         getObject(arg0).stroke();
+    };
+    imports.wbg.__widl_f_width_HTMLCanvasElement = function(arg0) {
+        return getObject(arg0).width;
+    };
+    imports.wbg.__widl_f_height_HTMLCanvasElement = function(arg0) {
+        return getObject(arg0).height;
     };
     imports.wbg.__widl_f_fill_rect_CanvasRenderingContext2D = function(arg0, arg1, arg2, arg3, arg4) {
         getObject(arg0).fillRect(arg1, arg2, arg3, arg4);
