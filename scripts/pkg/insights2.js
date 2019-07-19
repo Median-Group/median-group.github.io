@@ -470,11 +470,11 @@ function init(module) {
         let varg0 = getStringFromWasm(arg0, arg1);
         throw new Error(varg0);
     };
-    imports.wbg.__widl_f_set_stroke_style_CanvasRenderingContext2D = function(arg0, arg1) {
-        getObject(arg0).strokeStyle = getObject(arg1);
-    };
     imports.wbg.__widl_f_begin_path_CanvasRenderingContext2D = function(arg0) {
         getObject(arg0).beginPath();
+    };
+    imports.wbg.__widl_f_set_stroke_style_CanvasRenderingContext2D = function(arg0, arg1) {
+        getObject(arg0).strokeStyle = getObject(arg1);
     };
     imports.wbg.__widl_f_move_to_CanvasRenderingContext2D = function(arg0, arg1, arg2) {
         getObject(arg0).moveTo(arg1, arg2);
@@ -485,17 +485,17 @@ function init(module) {
     imports.wbg.__widl_f_stroke_CanvasRenderingContext2D = function(arg0) {
         getObject(arg0).stroke();
     };
-    imports.wbg.__widl_f_width_HTMLCanvasElement = function(arg0) {
-        return getObject(arg0).width;
-    };
-    imports.wbg.__widl_f_height_HTMLCanvasElement = function(arg0) {
-        return getObject(arg0).height;
-    };
     imports.wbg.__widl_f_fill_rect_CanvasRenderingContext2D = function(arg0, arg1, arg2, arg3, arg4) {
         getObject(arg0).fillRect(arg1, arg2, arg3, arg4);
     };
     imports.wbg.__widl_f_stroke_rect_CanvasRenderingContext2D = function(arg0, arg1, arg2, arg3, arg4) {
         getObject(arg0).strokeRect(arg1, arg2, arg3, arg4);
+    };
+    imports.wbg.__widl_f_width_HTMLCanvasElement = function(arg0) {
+        return getObject(arg0).width;
+    };
+    imports.wbg.__widl_f_height_HTMLCanvasElement = function(arg0) {
+        return getObject(arg0).height;
     };
 
     if (module instanceof URL || typeof module === 'string' || module instanceof Request) {
