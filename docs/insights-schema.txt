@@ -1,0 +1,35 @@
+# insights.json schema
+
+Each line in insights.json is a separate insight.
+
+Each insight has the following form:
+
+{
+   'UID': string,
+   'name': string,
+   'year': string,
+   'year-as-number': int,
+   'year-source': string,
+   'attributed-to':
+     [
+       {
+         'attributed-name': string,
+         'attributed-source': string,
+         'institution': {
+             'institution-name': string,
+             'institution-sector': string|null,
+             'institution-type': string|null
+         },
+         'institution-source': string,
+         'published-as': string,
+         'nationality-modern': string|null,
+         'nationality-original': string|null,
+         'nationality-source': string|null
+       }
+     ]
+   'notes': string
+}
+
+Sources are given in BibTeX format for all source fields (year-source, attributed-source, institution-source, published-as, nationality-source).
+
+All fields are present for all insights, though some fields may be null (as noted).
