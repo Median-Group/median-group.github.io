@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group</title><link href="/" rel="alternate"></link><link href="None/feed/all.atom.xml" rel="self"></link><id>/</id><updated>2019-07-14T11:05:11-07:00</updated><entry><title>Revisiting the Insights model</title><link href="/insights2.html" rel="alternate"></link><published>2019-07-14T11:05:11-07:00</published><updated>2019-07-14T11:05:11-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-07-14:/insights2.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group</title><link href="/" rel="alternate"></link><link href="None/feed/all.atom.xml" rel="self"></link><id>/</id><updated>2019-08-01T15:43:15-07:00</updated><entry><title>Revisiting the Insights model</title><link href="/insights2.html" rel="alternate"></link><published>2019-08-01T15:43:15-07:00</published><updated>2019-08-01T15:43:15-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-08-01:/insights2.html</id><summary type="html">
     &lt;link rel="stylesheet" type="text/css" href="/theme/css/nouislider.min.css"&gt;
     &lt;script async src="/scripts/nouislider.min.js"&gt;&lt;/script&gt;
     &lt;script async src="/scripts/insights2.js" type="module"&gt;&lt;/script&gt;
@@ -80,10 +80,10 @@
 
         &lt;div&gt;
           &lt;h4&gt;Sample &lt;em&gt;q&lt;/em&gt; with Beta(&amp;alpha;,&amp;nbsp;&amp;beta;)&lt;/h4&gt;
-          &lt;label for="alpha"&gt;&lt;em&gt;&amp;alpha;&lt;/em&gt;:&lt;/label&gt;
+          &lt;label for="alpha"&gt;&lt;em&gt;&amp;alpha;&lt;/em&gt;&lt;/label&gt;&lt;span&gt;:&lt;/span&gt;
           &lt;input type="number" value="1" id="alpha"&gt;
           &lt;br&gt;
-          &lt;label for="alpha"&gt;&lt;em&gt;&amp;beta;&lt;/em&gt;:&lt;/label&gt;
+          &lt;label for="beta"&gt;&lt;em&gt;&amp;beta;&lt;/em&gt;&lt;/label&gt;&lt;span&gt;:&lt;/span&gt;
           &lt;input type="number" value="1" id="beta"&gt;
           &lt;br&gt;
           &lt;button id="beta_pareto_btn"&gt;
