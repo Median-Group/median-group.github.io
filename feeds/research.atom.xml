@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group - research</title><link href="/" rel="alternate"></link><link href="None/feeds/research.atom.xml" rel="self"></link><id>/</id><updated>2019-08-01T15:43:15-07:00</updated><entry><title>Revisiting the Insights model</title><link href="/insights2.html" rel="alternate"></link><published>2019-08-01T15:43:15-07:00</published><updated>2019-08-01T15:43:15-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-08-01:/insights2.html</id><summary type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Median Group - research</title><link href="/" rel="alternate"></link><link href="None/feeds/research.atom.xml" rel="self"></link><id>/</id><updated>2019-07-20T00:00:00-07:00</updated><entry><title>Revisiting the Insights model</title><link href="/insights2.html" rel="alternate"></link><published>2019-07-20T00:00:00-07:00</published><updated>2019-07-20T00:00:00-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-07-20:/insights2.html</id><summary type="html">
     &lt;link rel="stylesheet" type="text/css" href="/theme/css/nouislider.min.css"&gt;
     &lt;script async src="/scripts/nouislider.min.js"&gt;&lt;/script&gt;
     &lt;script async src="/scripts/insights2.js" type="module"&gt;&lt;/script&gt;
@@ -128,8 +128,12 @@
       &lt;/div&gt;
     &lt;/section&gt;
 
-    &lt;section id="explanations"&gt;
-      &lt;!--Colleen can you write about the process of updating the old data set&gt;&lt;/--&gt;
+    &lt;section id="Sources"&gt;
+      &lt;h2&gt; Sources &lt;/h2&gt;
+      &lt;p&gt;
+        The data used in this model is available as a &lt;a href="http://mediangroup.org/docs/insights.json"&gt;&lt;span class="caps"&gt;JSON&lt;/span&gt; file&lt;/a&gt;.
+        The &lt;a href="https://github.com/Median-Group/insights2"&gt;source code&lt;/a&gt; for the demo can be found on the Median Group &lt;a href="https://github.com/Median-Group/"&gt;github&lt;/a&gt;.
+      &lt;/p&gt;
     &lt;/section&gt;
 
   </content></entry><entry><title>Feasibility of Training an AGI using Deep Reinforcement Learning: A Very Rough Estimate</title><link href="/rough_agi.html" rel="alternate"></link><published>2019-03-24T00:00:00-07:00</published><updated>2019-03-24T00:00:00-07:00</updated><author><name>Baeo Maltinsky</name></author><id>tag:None,2019-03-24:/rough_agi.html</id><summary type="html">&lt;p&gt;Exploring a suggested scenario for near-term &lt;span class="caps"&gt;AGI&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Several months ago, we were presented with a scenario for how artificial general intelligence (&lt;span class="caps"&gt;AGI&lt;/span&gt;) may be achieved in the near future. We found the approach surprising, so we attempted to produce a rough model to investigate its feasibility. The document presents the model and its&amp;nbsp;conclusions.&lt;/p&gt;
